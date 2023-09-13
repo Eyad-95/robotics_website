@@ -1,5 +1,32 @@
 .post {
   max-width: 65%;
-  padding: 4rem;
+  height: 75vh;
   background-color: $color-grey-2;
+  padding: 8rem 7rem 7.5rem 7rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.7);
+  &:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+  &__panel {
+    width: 100%;
+    min-height: 90%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 1.5rem 1rem rgba($color-black, 0.15);
+  }
+
+  &__img {
+    width: 100%;
+    min-height: 80%;
+    background-size: cover;
+  }
+
+  &__text-container .text {
+    width: 90%;
+    margin-left: 3%;
+  }
 }

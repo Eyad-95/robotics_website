@@ -12,13 +12,37 @@ body {
   box-sizing: border-box;
   padding: 1rem 15rem; }
 
+img {
+  background: transparent; }
+
 body {
   font-family: "Lato", sans-serif;
   color: #fbfbfb; }
 
+.heading-secondary {
+  color: #d92f0e;
+  font-size: 3.5rem;
+  letter-spacing: 1.7px; }
+
+.text--small {
+  letter-spacing: 1.5px;
+  font-size: 1.3rem;
+  line-height: 1.5rem; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 2.5rem !important; }
+
 .carousel__img-box {
   width: 100%;
-  height: 45rem; }
+  height: 45rem;
+  overflow: hidden;
+  border-radius: 2px; }
 
 .carousel__img {
   height: 100%;
@@ -63,7 +87,29 @@ body {
 
 .post {
   max-width: 65%;
-  background-color: #2a2a2e; }
+  height: 75vh;
+  background-color: #2a2a2e;
+  padding: 8rem 7rem 7.5rem 7rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 1.5rem 4rem rgba(0, 1, 1, 0.7); }
+  .post:not(:last-child) {
+    margin-bottom: 5rem; }
+  .post__panel {
+    width: 100%;
+    min-height: 90%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 1.5rem 1rem rgba(0, 1, 1, 0.15); }
+  .post__img {
+    width: 100%;
+    min-height: 80%;
+    background-size: cover; }
+  .post__text-container .text {
+    width: 90%;
+    margin-left: 3%; }
 
 .header {
   display: flex;
@@ -71,17 +117,17 @@ body {
   justify-content: space-between;
   align-items: center;
   max-width: 80%;
-  margin: 2rem auto;
+  margin: 0 auto;
   left: 0;
   right: 0; }
   .header__logo-box--1 {
-    width: 338px;
-    height: 110px;
-    background-color: aqua; }
+    width: 40rem;
+    height: 8rem;
+    background-color: transparent; }
   .header__logo-box--2 {
-    width: 138px;
-    height: 130px;
-    background-color: orangered; }
+    width: 14rem;
+    height: 10rem;
+    background-color: transparent; }
   .header__logo--1 {
     width: 100%;
     height: 100%; }
@@ -90,10 +136,9 @@ body {
     height: 100%; }
 
 .nav {
-  background-color: #d92f0e;
   display: inline-block;
   padding: 0.5rem 3rem;
-  border-radius: 100px; }
+  letter-spacing: 1.5px; }
   .nav__nav-list {
     display: flex;
     list-style: none;
@@ -102,15 +147,48 @@ body {
     display: inline-block; }
     .nav__nav-item:not(:last-child) {
       margin-right: 3rem; }
-  .nav__nav-link:link, .nav__nav-link:hover {
+  .nav__nav-link:link, .nav__nav-link:visited {
     text-decoration: none;
-    color: currentColor; }
+    color: currentColor;
+    transition: color 0.2s; }
+  .nav__nav-link:hover {
+    color: #d92f0e;
+    font-weight: 400; }
+
+.footer {
+  width: 100%;
+  height: 10vh;
+  background-color: #d92f0e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  position: absolute;
+  left: 0;
+  margin-top: 5rem; }
+  .footer__social-box {
+    list-style: none;
+    display: flex; }
+  .footer__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-repeat: no-repeat; }
+    .footer__icon:not(:last-child) {
+      margin-right: 1rem; }
+    .footer__icon--1 {
+      background-image: url(../../img/icons/facebook.svg); }
+    .footer__icon--2 {
+      background-image: url(../../img/icons/instagram.svg); }
+    .footer__icon--3 {
+      background-image: url(../../img/icons/whatsapp.svg); }
+  .footer .header__logo-box--1 {
+    height: 5rem; }
 
 body {
   background-color: #1c1c1c; }
 
 .carouselcounter-section {
-  margin-top: 21rem;
+  margin-top: 10rem;
   margin-bottom: 10rem; }
 
 .posts-section {
