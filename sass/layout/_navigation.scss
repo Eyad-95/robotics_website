@@ -1,0 +1,25 @@
+.nav {
+  color: $color-white;
+  background-color: $color-primary-1;
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border-radius: 100px;
+  &__nav-list {
+    display: flex;
+    list-style: none;
+    font-size: 3.5rem;
+  }
+
+  &__nav-item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+
+  &__nav-link:link,
+  &__nav-link:hover {
+    text-decoration: none;
+    color: currentColor;
+  }
+}
