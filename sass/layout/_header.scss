@@ -1,7 +1,12 @@
 .header {
   display: flex;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
+  max-width: 80%;
+  margin: 2rem auto;
+  left: 0;
+  right: 0;
   &__logo-box {
     &--1 {
       width: 338px;
