@@ -7,13 +7,13 @@
   &__nav-list {
     display: flex;
     list-style: none;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   &__nav-item {
     display: inline-block;
     &:not(:last-child) {
-      margin-right: 3rem;
+      margin-right: 4.3rem;
     }
   }
 

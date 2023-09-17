@@ -3,7 +3,7 @@
   border-bottom: 3px solid $color-grey-2;
   padding: 7rem 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   &__column {
     display: flex;
@@ -12,11 +12,11 @@
   }
 
   &__number {
-    font-size: 15rem;
+    font-size: 12rem;
     font-weight: bold;
   }
 
   &__disc {
-    font-size: 7rem;
+    font-size: 5rem;
   }
 }
