@@ -64,6 +64,8 @@ body {
   .carousel__navigator-item--active {
     background-color: #fbfbfb;
     cursor: default; }
+  .carousel__navigator-item:not(.carousel__navigator-item--active):hover {
+    background-color: #d92f0e; }
 
 .counter {
   border-top: 3px solid #2a2a2e;
@@ -83,30 +85,33 @@ body {
     font-size: 5rem; }
 
 .post {
-  max-width: 65%;
-  height: 75vh;
+  width: calc(50% - 2rem);
+  min-height: 20rem;
   background-color: #2a2a2e;
-  padding: 8rem 7rem 7.5rem 7rem;
+  padding: 8rem 3rem;
+  padding-top: 2rem;
+  margin-bottom: 5rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-shadow: 0 1.5rem 4rem rgba(0, 1, 1, 0.7); }
-  .post:not(:last-child) {
-    margin-bottom: 5rem; }
   .post__panel {
     width: 100%;
-    min-height: 90%;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 1.5rem 1rem rgba(0, 1, 1, 0.15); }
+    height: 80%;
+    box-shadow: 0 1.5rem 1rem rgba(0, 1, 1, 0.15);
+    border-radius: 10px; }
   .post__img {
+    height: 100%;
     width: 100%;
-    min-height: 80%;
+    border-radius: 10px;
+    transform: translateY(2px);
     background-size: cover; }
   .post__text-container .text {
     width: 90%;
     margin-left: 3%; }
+  .post:nth-child(2n + 1) {
+    margin-right: 4rem; }
 
 .header {
   display: flex;
@@ -117,7 +122,8 @@ body {
   height: 10rem;
   margin: 0 auto;
   left: 0;
-  right: 0; }
+  right: 0;
+  z-index: 2; }
   .header__logo-box--1 {
     height: 100%; }
   .header__logo-box--2 {
@@ -187,5 +193,5 @@ body {
 
 .posts-section {
   display: flex;
-  flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  flex-wrap: wrap; }

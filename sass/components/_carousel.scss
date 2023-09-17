@@ -26,12 +26,18 @@
     background-color: $color-grey-2;
     cursor: pointer;
     transition: all 0.2s;
+
     &:not(:last-child) {
       margin-right: 3rem;
     }
+
     &--active {
       background-color: $color-white;
       cursor: default;
+    }
+
+    &:not(&--active):hover {
+      background-color: $color-primary-1;
     }
   }
 }

@@ -1,32 +1,38 @@
 .post {
-  max-width: 65%;
-  height: 75vh;
+  width: calc(50% - 2rem);
+  min-height: 20rem;
   background-color: $color-grey-2;
-  padding: 8rem 7rem 7.5rem 7rem;
+  padding: 8rem 3rem;
+  padding-top: 2rem;
+  margin-bottom: 5rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.7);
-  &:not(:last-child) {
-    margin-bottom: 5rem;
-  }
+
   &__panel {
     width: 100%;
-    min-height: 90%;
-    overflow: hidden;
-    border-radius: 10px;
+    height: 80%;
     box-shadow: 0 1.5rem 1rem rgba($color-black, 0.15);
+    border-radius: 10px;
+    // overflow: hidden;
   }
 
   &__img {
+    height: 100%;
     width: 100%;
-    min-height: 80%;
+    border-radius: 10px;
+    transform: translateY(2px);
     background-size: cover;
   }
 
   &__text-container .text {
     width: 90%;
     margin-left: 3%;
+  }
+
+  &:nth-child(2n + 1) {
+    margin-right: 4rem;
   }
 }
