@@ -3,7 +3,10 @@
   display: inline-block;
   padding: 0.5rem 3rem;
   //   border-radius: 100px;
+  margin-left: -4rem;
   letter-spacing: 1.5px;
+  max-width: 100%;
+
   &__nav-list {
     display: flex;
     list-style: none;
@@ -27,5 +30,17 @@
   &__nav-link:hover {
     color: $color-primary-1;
     font-weight: 400;
+  }
+
+  @media only screen and (max-width: 85.3em) {
+    padding: 0;
+  }
+
+  @include respond(tab-land) {
+    padding: 0;
+  }
+
+  @media only screen and (max-width: 68.75em) {
+    display: none;
   }
 }

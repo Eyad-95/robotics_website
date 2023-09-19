@@ -1,9 +1,22 @@
 body {
   background-color: $color-grey-1;
+  padding: 1rem 15rem;
+
+  @include respond(tab-land) {
+    padding: 0 10rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 0 4rem;
+  }
+
+  @include respond(phone) {
+    padding: 0 2rem;
+  }
 }
 
 .carouselcounter-section {
-  margin-top: 15rem;
+  margin-top: 4rem;
   margin-bottom: 10rem;
 }
 

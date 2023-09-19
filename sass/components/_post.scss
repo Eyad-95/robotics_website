@@ -16,6 +16,9 @@
     height: 80%;
     box-shadow: 0 1.5rem 1rem rgba($color-black, 0.15);
     border-radius: 10px;
+    @include respond(phone) {
+      height: 60%;
+    }
     // overflow: hidden;
   }
 
@@ -30,9 +33,18 @@
   &__text-container .text {
     width: 90%;
     margin-left: 3%;
+    line-height: 3rem;
   }
 
   &:nth-child(2n + 1) {
     margin-right: 4rem;
+  }
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    width: 100%;
+    &:nth-child(2n + 1) {
+      margin-right: 0;
+    }
   }
 }

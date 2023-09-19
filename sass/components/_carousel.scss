@@ -4,6 +4,10 @@
     height: 45rem;
     overflow: hidden;
     border-radius: 2px;
+
+    @include respond(phone) {
+      height: 40rem;
+    }
   }
 
   &__img {
