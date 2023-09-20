@@ -1,0 +1,53 @@
+.general-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 5rem;
+  grid-gap: 5rem;
+
+  @include respond(phone) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(xs-phone) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 8rem;
+  }
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__img-box {
+    max-width: 20rem;
+    max-height: 20rem;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px $color-grey-2;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  &__img {
+    width: 100%;
+    background-size: cover;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+      filter: brightness(110%);
+    }
+  }
+
+  &__name {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  &__disc {
+    font-size: 1.75rem;
+    font-weight: 300;
+    letter-spacing: 0.25rem;
+    color: $color-primary-1;
+    filter: brightness(70%);
+  }
+}

@@ -16,4 +16,19 @@ html {
 
 body {
   box-sizing: border-box;
+
+  background-color: $color-grey-1;
+  padding: 1rem 15rem;
+
+  @include respond(tab-land) {
+    padding: 0 10rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 0 4rem;
+  }
+
+  @include respond(phone) {
+    padding: 0 2rem;
+  }
 }

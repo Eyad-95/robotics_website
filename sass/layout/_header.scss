@@ -5,14 +5,48 @@
   height: 10rem;
   margin-top: 2rem;
   position: relative;
-
+  z-index: 100;
   &__logo {
     &--1 {
       min-width: 25rem;
+
+      image {
+        cursor: pointer;
+        transition: all 0.1s;
+
+        &:hover {
+          filter: invert(25%) sepia(92%) saturate(7436%) hue-rotate(343deg)
+            brightness(88%) contrast(110%);
+          transform: translateY(-1.5rem);
+        }
+      }
+
+      @include respond(in-between-tab) {
+        min-width: 20rem;
+        max-width: 30rem;
+      }
+
+      // &:hover {
+      //   display: none;
+      //   & + svg {
+      //     display: inline-block;
+      //   }
+      // }
     }
 
     &--2 {
       min-width: 10rem;
+
+      image {
+        cursor: pointer;
+        transition: all 0.1s;
+
+        &:hover {
+          filter: invert(25%) sepia(92%) saturate(7436%) hue-rotate(343deg)
+            brightness(88%) contrast(110%);
+          transform: translateY(-1.5rem);
+        }
+      }
 
       @media only screen and (max-width: 85.3em) {
         display: none;

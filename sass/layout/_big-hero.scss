@@ -1,0 +1,29 @@
+.big-hero {
+  &__slogan {
+    max-width: 50%;
+    font-size: 6rem;
+    line-height: 7rem;
+    letter-spacing: 0.25rem;
+    font-weight: 400;
+
+    span {
+      color: $color-primary-1;
+    }
+
+    @include respond(phone) {
+      text-align: center;
+      margin: 0 auto;
+      font-size: 4.5rem;
+      line-height: 6rem;
+      max-width: 90%;
+    }
+  }
+  &__img {
+    width: 50%;
+    transform: translateX(20%);
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+}

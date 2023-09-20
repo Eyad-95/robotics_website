@@ -1,0 +1,93 @@
+.big-hero-section {
+  display: flex;
+  align-items: center;
+
+  @include respond(phone) {
+    margin-top: 5rem;
+  }
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: -8rem;
+
+  &__intro {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+
+  &__mission-vision {
+    display: flex;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    font-size: 2rem;
+    max-width: 60%;
+    line-height: 3rem;
+    opacity: 0.7;
+  }
+
+  @include respond(tab-land) {
+    margin-top: 2rem;
+  }
+
+  @include respond(tab-port) {
+    margin-top: 0;
+  }
+
+  @include respond(phone) {
+    margin-top: 5rem;
+
+    &__vision {
+      margin-top: 5rem;
+    }
+  }
+}
+
+.advisors-section,
+.board-section {
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.sponsers {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10rem 0;
+
+  &__box {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin-top: 7rem;
+    grid-gap: 3rem;
+
+    @include respond(in-between-tab) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row-gap: 10rem;
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond(phone) {
+      margin-top: 10rem;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+  }
+}

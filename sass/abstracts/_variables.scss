@@ -12,3 +12,7 @@ $font-primary: "Lato", sans-serif;
 $font-secondary: sans-serif;
 
 $box-shadow-1: 3px 3px 6px #4a4a4af2;
+$box-shadow-2: 3px 3px 6px $color-black;
+
+$filter-primary: invert(25%) sepia(92%) saturate(7436%) hue-rotate(343deg)
+  brightness(88%) contrast(110%);

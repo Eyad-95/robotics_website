@@ -1,18 +1,22 @@
 .ham-btn {
   position: absolute;
   right: 0;
-  height: 90%;
-  //   background-color: azure;
+  height: 5rem;
+  width: 5rem;
   border: 1px solid $color-grey-2;
   border-radius: 8px;
-  padding: 2rem 1.5rem;
+  padding: 0.5rem 0;
 
   &__line {
     position: relative;
     background-color: $color-white;
     border-radius: 50px;
-    width: 7rem;
-    height: 3px;
+    width: 3rem;
+    height: 2px;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s;
   }
 
   &::after,
@@ -21,25 +25,27 @@
     display: block;
     background-color: $color-white;
     border-radius: 50px;
-    width: 7rem;
-    height: 3px;
+    width: 3rem;
+    height: 2px;
+    transition: all 0.1s;
   }
 
   &::before {
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &::after {
     position: relative;
-    top: 67%;
-    height: 3.5px;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &:hover &__line {
-    transform: rotate(45deg);
-    top: 40%;
+    transform: translate(-50%, 20%) rotate(45deg);
   }
 
   &:hover::before {
@@ -47,11 +53,10 @@
   }
 
   &:hover::after {
-    transform: rotate(-45deg);
-    top: 32%;
+    transform: translate(-50%, -200%) rotate(-45deg);
   }
 
-  @media only screen and (max-width: 68.75em) {
+  @include respond(in-between-tab) {
     display: inline-block;
   }
 }

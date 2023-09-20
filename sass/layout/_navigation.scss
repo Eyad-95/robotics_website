@@ -1,8 +1,6 @@
 .nav {
-  //   background-color: $color-primary-1;
   display: inline-block;
   padding: 0.5rem 3rem;
-  //   border-radius: 100px;
   margin-left: -4rem;
   letter-spacing: 1.5px;
   max-width: 100%;
@@ -16,20 +14,38 @@
   &__nav-item {
     display: inline-block;
     &:not(:last-child) {
-      margin-right: 4.3rem;
+      margin-right: 3.5rem;
     }
+  }
+
+  &__nav-item::after {
+    content: "";
+    margin-top: 2px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $color-primary-1;
+    transform: scaleX(0);
+
+    transition: all 0.3s ease;
   }
 
   &__nav-link:link,
   &__nav-link:visited {
     text-decoration: none;
     color: currentColor;
-    transition: color 0.2s;
+    transition: color 0.3s;
   }
 
-  &__nav-link:hover {
-    color: $color-primary-1;
-    font-weight: 400;
+  &__nav-item:hover {
+    cursor: pointer;
+    &::after {
+      transform: scaleX(1) translateY(3px);
+    }
+    > .nav__nav-link {
+      color: $color-primary-1;
+      font-weight: 400;
+    }
   }
 
   @media only screen and (max-width: 85.3em) {
@@ -40,7 +56,7 @@
     padding: 0;
   }
 
-  @media only screen and (max-width: 68.75em) {
+  @include respond(in-between-tab) {
     display: none;
   }
 }
