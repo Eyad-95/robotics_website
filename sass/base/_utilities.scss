@@ -15,5 +15,16 @@
 }
 
 .active {
-  color: $color-primary-1 !important;
+  &--link {
+    color: $color-primary-1 !important;
+    &::after {
+      content: "";
+      margin-top: 5px !important;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $color-primary-1;
+      transform: scaleX(1) !important;
+    }
+  }
 }
