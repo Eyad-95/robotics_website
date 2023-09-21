@@ -1,0 +1,24 @@
+.header-section {
+  text-align: center;
+  margin-top: 7rem;
+
+  h1 {
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: $letter-spacing-heading;
+  }
+
+  p {
+    font-size: 2.5rem;
+    font-weight: 300;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+}
+
+.cards-section {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

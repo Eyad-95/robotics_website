@@ -1,0 +1,66 @@
+.btn-group {
+  display: flex;
+  align-items: center;
+
+  @include respond(tab-land) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-align: center;
+    border-radius: 10rem;
+    outline: none;
+    padding: 1rem 3rem;
+    font-size: 1.75rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+    cursor: pointer;
+    position: relative;
+
+    @include respond(tab-land) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--red {
+    background-color: $color-primary-1;
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-primary-1;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 2rem;
+
+    @include respond(tab-land) {
+      margin-right: 0;
+    }
+  }
+}
