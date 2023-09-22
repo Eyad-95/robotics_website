@@ -1,0 +1,45 @@
+.display-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.display-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33.333%;
+  height: 100%;
+  text-align: center;
+
+  &__text {
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: $letter-spacing-small;
+    opacity: 0.7;
+  }
+
+  &--1 {
+    background: transparent linear-gradient(180deg, #3f3f3f 0%, #7e7e7e 100%) 0%
+      0% no-repeat padding-box;
+  }
+
+  &--2 {
+    background: transparent
+      linear-gradient(180deg, #322f2f 0%, #4d4a4a 75%, #767474 100%) 0% 0%
+      no-repeat padding-box;
+  }
+
+  &--3 {
+    background: transparent
+      linear-gradient(180deg, #000000e3 0%, #040404e3 20%, #545454e3 100%) 0% 0%
+      no-repeat padding-box;
+  }
+
+  &:focus-within + &__disc {
+    display: block;
+  }
+}
