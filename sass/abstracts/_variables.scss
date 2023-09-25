@@ -1,4 +1,5 @@
 $color-primary-1: #ea002a;
+$color-primary-2: #ea002bad;
 $color-secondary: #2a2b2f;
 
 $color-white: #fbfbfb;
@@ -13,6 +14,8 @@ $font-secondary: sans-serif;
 
 $box-shadow-1: 3px 3px 6px #4a4a4af2;
 $box-shadow-2: 3px 3px 6px $color-black;
+$box-shadow-3: 0 10px 6px $color-black;
+$box-shadow-3--light: 0 7px 6px $color-black;
 
 $filter-primary: invert(25%) sepia(92%) saturate(7436%) hue-rotate(343deg)
   brightness(88%) contrast(110%);

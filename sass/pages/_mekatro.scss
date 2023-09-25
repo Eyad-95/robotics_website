@@ -1,0 +1,10 @@
+.sessions-section {
+  margin-top: 15rem;
+  margin-bottom: 7rem;
+
+  @include respond(phone) {
+    h2 {
+      text-align: center;
+    }
+  }
+}
