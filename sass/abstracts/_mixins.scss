@@ -49,3 +49,27 @@ ORDER: Base + typography > general layout + grid > page layout > components
     } //1800
   }
 }
+
+@mixin overlay($clr, $op) {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    @if $clr == dark {
+      background-image: $overlay-dark;
+    }
+
+    @if $clr == light {
+      background-image: $overlay-light;
+    }
+
+    opacity: $op;
+    z-index: 1;
+  }
+}

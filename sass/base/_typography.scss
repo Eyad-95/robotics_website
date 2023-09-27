@@ -7,13 +7,14 @@ body {
   color: $color-primary-1;
   font-size: 3.5rem;
   letter-spacing: 1.7px;
+  text-transform: capitalize;
 }
 
 .text {
   &--small {
     letter-spacing: 1.5px;
     font-size: 1.3rem;
-    line-height: 2.5rem;
+    line-height: 2rem;
   }
 }
 

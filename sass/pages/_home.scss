@@ -4,7 +4,12 @@
 }
 
 .posts-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+
+  gap: 3rem;
 }
