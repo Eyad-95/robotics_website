@@ -23,3 +23,27 @@ $filter-primary: invert(25%) sepia(92%) saturate(7436%) hue-rotate(343deg)
 $letter-spacing-heading: 1rem;
 $letter-spacing-sub-heading: 0.5rem;
 $letter-spacing-small: 0.25rem;
+$letter-spacing-xs: 0.2rem;
+
+$overlay-dark: linear-gradient(
+  to top left,
+  rgba($color-black, 0.3) 0%,
+  rgba($color-black, 0.3) 25%,
+  rgba($color-black, 0.2) 25%,
+  rgba($color-black, 0.2) 50%,
+  rgba($color-black, 0.1) 50%,
+  rgba($color-black, 0.1) 75%,
+  rgba($color-black, 0.05) 75%,
+  rgba($color-black, 0.05) 100%
+);
+$overlay-light: linear-gradient(
+  to top left,
+  rgba(white, 0.4) 0%,
+  rgba(white, 0.4) 25%,
+  rgba(white, 0.3) 25%,
+  rgba(white, 0.3) 50%,
+  rgba(white, 0.2) 50%,
+  rgba(white, 0.2) 75%,
+  rgba(white, 0.1) 75%,
+  rgba(white, 0.1) 100%
+);

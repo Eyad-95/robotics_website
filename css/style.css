@@ -431,7 +431,7 @@ h2 {
     width: 100%;
     height: 100%;
     background-size: cover;
-    transition: all 0.2s; }
+    transition: transform 0.2s; }
   .session-card__disc {
     position: absolute;
     bottom: 1.2rem;
@@ -446,7 +446,7 @@ h2 {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px; }
   .session-card:hover .session-card__disc {
-    transform: translate(-7%, 22%); }
+    transform: translate(-7%, 22%) scale(1.02); }
   .session-card:hover .session-card__img-box .session-card__img {
     transform: scale(1.05); }
 
@@ -490,6 +490,72 @@ h2 {
 .half--2 {
   clip-path: polygon(43.77666% 43.83035%, 43.77874% 44.21955%, 43.7795% 44.59109%, 43.77934% 44.93442%, 43.77855% 45.23898%, 43.77741% 45.49423%, 43.77625% 45.68961%, 43.77533% 45.81458%, 43.77495% 45.85858%, 43.77518% 46.12957%, 43.7754% 46.40056%, 43.77563% 46.67156%, 43.77585% 46.94255%, 43.77608% 47.21355%, 43.7763% 47.48454%, 43.77653% 47.75554%, 43.77675% 48.02654%, 43.77653% 48.29753%, 43.7763% 48.56852%, 43.77608% 48.83952%, 43.77585% 49.11051%, 43.77563% 49.38151%, 43.7754% 49.65251%, 43.77518% 49.9235%, 43.77495% 50.1945%, 44.48391% 50.19436%, 45.19287% 50.19422%, 45.90183% 50.19408%, 46.61079% 50.19394%, 47.31975% 50.1938%, 48.0287% 50.19366%, 48.73766% 50.19353%, 49.44662% 50.19338%, 50.72252% 50.19353%, 51.99842% 50.19366%, 53.27432% 50.1938%, 54.55022% 50.19394%, 55.82611% 50.19408%, 57.10201% 50.19422%, 58.3779% 50.19436%, 59.6538% 50.1945%, 59.57598% 49.79136%, 59.31883% 49.39688%, 58.84686% 48.97402%, 58.12456% 48.48572%, 57.11643% 47.89493%, 55.78697% 47.16458%, 54.10066% 46.25764%, 52.02202% 45.13705%, 49.96525% 44.01371%, 48.3319% 43.11074%, 47.06745% 42.4094%, 46.11739% 41.89096%, 45.42719% 41.53667%, 44.94235% 41.3278%, 44.60834% 41.24561%, 44.37066% 41.27137%, 44.15383% 41.40575%, 43.99617% 41.62256%, 43.88847% 41.90709%, 43.82151% 42.24461%, 43.78608% 42.62041%, 43.77304% 43.01978%, 43.773% 43.428%);
   transition: clip-path 500ms; }
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  @media only screen and (max-width: 40.625em) {
+    .project {
+      flex-direction: column; } }
+  .project:not(:last-child) {
+    margin-bottom: 8rem; }
+    @media only screen and (max-width: 40.625em) {
+      .project:not(:last-child) {
+        margin-bottom: 10rem; } }
+  .project__img-box {
+    position: relative;
+    max-width: 30rem;
+    height: 100%;
+    box-shadow: -50px -50px 0 -40px #ea002a, 50px 50px 0 -40px #ea002a;
+    margin-right: 10%;
+    overflow: hidden; }
+    @media only screen and (max-width: 40.625em) {
+      .project__img-box {
+        margin-bottom: 6rem;
+        max-width: 70%;
+        margin-right: 0; } }
+    .project__img-box::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: linear-gradient(to top left, rgba(0, 1, 1, 0.3) 0%, rgba(0, 1, 1, 0.3) 25%, rgba(0, 1, 1, 0.2) 25%, rgba(0, 1, 1, 0.2) 50%, rgba(0, 1, 1, 0.1) 50%, rgba(0, 1, 1, 0.1) 75%, rgba(0, 1, 1, 0.05) 75%, rgba(0, 1, 1, 0.05) 100%);
+      opacity: 0.7;
+      z-index: 1; }
+    .project__img-box:hover > img {
+      transform: scale(1.05);
+      filter: brightness(130%); }
+  .project__img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    transition: all 0.2s; }
+  .project__disc-box {
+    width: 80%; }
+    @media only screen and (max-width: 40.625em) {
+      .project__disc-box {
+        text-align: center; } }
+  .project__heading {
+    color: #ea002a;
+    letter-spacing: 0.25rem;
+    font-weight: 600;
+    font-size: 3rem; }
+  .project__disc {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0.2rem; }
+  .project:nth-child(2n) .project__img-box {
+    order: 1;
+    margin-right: 0;
+    margin-left: 10%; }
+    @media only screen and (max-width: 40.625em) {
+      .project:nth-child(2n) .project__img-box {
+        order: 0;
+        margin-left: 0; } }
 
 .header {
   display: flex;
@@ -770,3 +836,9 @@ h2 {
   @media only screen and (max-width: 40.625em) {
     .sessions-section h2 {
       text-align: center; } }
+
+.projects-section {
+  margin: 10rem 0 8rem 0; }
+  @media only screen and (max-width: 40.625em) {
+    .projects-section {
+      margin: 10rem 0 6rem 0; } }

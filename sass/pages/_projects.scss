@@ -1,0 +1,7 @@
+.projects-section {
+  margin: 10rem 0 8rem 0;
+
+  @include respond(phone) {
+    margin: 10rem 0 6rem 0;
+  }
+}
