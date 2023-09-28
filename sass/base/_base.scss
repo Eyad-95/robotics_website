@@ -18,7 +18,7 @@ body {
   box-sizing: border-box;
 
   background-color: $color-grey-1;
-  padding: 1rem 15rem;
+  padding: 1rem 14rem;
 
   @include respond(tab-land) {
     padding: 0 10rem;

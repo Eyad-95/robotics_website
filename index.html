@@ -86,19 +86,35 @@
 
     <main class="main">
       <section class="carouselcounter-section">
-        <div class="carousel">
-          <div class="carousel__img-box">
-            <img class="carousel__img" src="img/test.jpg" alt="" />
-          </div>
-          <div class="carousel__navigator">
-            <div
-              class="carousel__navigator-item carousel__navigator-item--active"
-            ></div>
-            <div class="carousel__navigator-item"></div>
-            <div class="carousel__navigator-item"></div>
-            <div class="carousel__navigator-item"></div>
+        <div class="carousel-container">
+          <div class="carousel" id="carousel">
+            <div class="carousel__img-box">
+              <img class="carousel__img" src="img/test.jpg" alt="" />
+            </div>
+            <div class="carousel__img-box">
+              <img class="carousel__img" src="img/test.jpg" alt="" />
+            </div>
+            <div class="carousel__img-box">
+              <img class="carousel__img" src="img/test.jpg" alt="" />
+            </div>
+            <div class="carousel__img-box">
+              <img class="carousel__img" src="img/test.jpg" alt="" />
+            </div>
+
+            <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
+
+            <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+            <!-- <div class="carousel__navigator">
+              <div
+                class="carousel__navigator-item carousel__navigator-item--active"
+              ></div>
+              <div class="carousel__navigator-item"></div>
+              <div class="carousel__navigator-item"></div>
+              <div class="carousel__navigator-item"></div>
+            </div> -->
           </div>
         </div>
+
         <div class="counter">
           <div class="counter__column">
             <span class="counter__number">60</span
@@ -243,5 +259,7 @@
         <a class="footer__icon footer__icon--3" href="whatsapp.com"></a>
       </div>
     </footer>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>

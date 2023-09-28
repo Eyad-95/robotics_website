@@ -31,7 +31,7 @@ html {
 body {
   box-sizing: border-box;
   background-color: #1c1c1c;
-  padding: 1rem 15rem; }
+  padding: 1rem 14rem; }
   @media only screen and (max-width: 78em) {
     body {
       padding: 0 10rem; } }
@@ -88,40 +88,73 @@ h2 {
     background-color: #ea002a;
     transform: scaleX(1) !important; }
 
-.carousel__img-box {
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 7rem;
+  box-shadow: 3px 3px 6px #000101; }
+
+.carousel {
   width: 100%;
   max-height: 50rem;
-  overflow: hidden;
-  border-radius: 2px; }
-  @media only screen and (max-width: 40.625em) {
-    .carousel__img-box {
-      max-height: 100%; } }
-
-.carousel__img {
-  max-width: 100%;
-  background-position: center;
-  background-size: cover; }
-
-.carousel__navigator {
-  padding: 3rem 0;
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  overflow: hidden;
+  scroll-behavior: smooth; }
+  .carousel__img-box {
+    position: relative;
+    flex: 1 0 100%;
+    overflow: hidden;
+    border-radius: 2px; }
+    .carousel__img-box::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: linear-gradient(to top left, rgba(0, 1, 1, 0.3) 0%, rgba(0, 1, 1, 0.3) 25%, rgba(0, 1, 1, 0.2) 25%, rgba(0, 1, 1, 0.2) 50%, rgba(0, 1, 1, 0.1) 50%, rgba(0, 1, 1, 0.1) 75%, rgba(0, 1, 1, 0.05) 75%, rgba(0, 1, 1, 0.05) 100%);
+      opacity: 0.8;
+      z-index: 1; }
+    .carousel__img-box:hover img {
+      transform: scale(1.05);
+      filter: brightness(1.1); }
+  .carousel__img {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.2s; }
 
-.carousel__navigator-item {
-  width: 10rem;
-  height: 1rem;
-  border-radius: 100px;
-  background-color: #2a2a2e;
+.slide-arrow {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 4rem;
+  background-color: white;
+  border: none;
+  width: 2rem;
+  font-size: 3rem;
+  padding: 0;
   cursor: pointer;
-  transition: all 0.2s; }
-  .carousel__navigator-item:not(:last-child) {
-    margin-right: 3rem; }
-  .carousel__navigator-item--active {
-    background-color: #fbfbfb;
-    cursor: default; }
-  .carousel__navigator-item:not(.carousel__navigator-item--active):hover {
-    background-color: #ea002a; }
+  opacity: 0.5;
+  transition: opacity 100ms;
+  z-index: 100; }
+
+.slide-arrow:hover,
+.slide-arrow:focus {
+  opacity: 1; }
+
+#slide-arrow-prev {
+  left: 0;
+  padding-left: 0.25rem;
+  border-radius: 0 2rem 2rem 0; }
+
+#slide-arrow-next {
+  right: 0;
+  padding-left: 0.75rem;
+  border-radius: 2rem 0 0 2rem; }
 
 .counter {
   border-top: 3px solid #2a2a2e;
@@ -453,7 +486,8 @@ h2 {
     width: 100%;
     height: 100%;
     background-size: cover;
-    transition: transform 0.2s; }
+    transition: transform 0.2s;
+    backface-visibility: hidden; }
   .session-card__disc {
     position: absolute;
     bottom: 1.2rem;
@@ -471,6 +505,10 @@ h2 {
     transform: translate(-7%, 22%) scale(1.02); }
   .session-card:hover .session-card__img-box .session-card__img {
     transform: scale(1.05); }
+  .session-card:hover .play-button {
+    transform: translate(-50%, -52%); }
+  .session-card .play-button:active {
+    transform: translate(-50%, -50%); }
 
 .play-button {
   position: absolute;
@@ -480,7 +518,8 @@ h2 {
   align-items: center;
   display: flex;
   justify-content: center;
-  z-index: 2; }
+  z-index: 2;
+  transition: all 0.2s; }
 
 .circle {
   background: #ea002a;
@@ -691,7 +730,7 @@ h2 {
     height: 15rem; }
 
 .big-hero__slogan {
-  max-width: 50%;
+  width: 60%;
   font-size: 6rem;
   line-height: 7rem;
   letter-spacing: 0.25rem;
@@ -707,7 +746,7 @@ h2 {
       max-width: 90%; } }
 
 .big-hero__img {
-  width: 50%;
+  width: 40%;
   transform: translateX(20%); }
   @media only screen and (max-width: 40.625em) {
     .big-hero__img {

@@ -71,6 +71,7 @@
     height: 100%;
     background-size: cover;
     transition: transform 0.2s;
+    backface-visibility: hidden;
   }
 
   &__disc {
@@ -97,5 +98,13 @@
     &:hover &__img-box &__img {
       transform: scale(1.05);
     }
+
+    &:hover .play-button {
+      transform: translate(-50%, -52%);
+    }
+  }
+
+  .play-button:active {
+    transform: translate(-50%, -50%);
   }
 }
