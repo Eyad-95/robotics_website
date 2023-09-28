@@ -100,6 +100,10 @@ h2 {
     background-color: #ea002a;
     transform: scaleX(1) !important; }
 
+.helper-class--handouts {
+  display: flex;
+  justify-content: space-between; }
+
 .carousel-container {
   position: relative;
   overflow: hidden;
@@ -360,20 +364,29 @@ h2 {
         .card__content-box:last-of-type {
           margin-bottom: 2rem; } }
   .card__heading {
+    align-self: flex-start;
     font-size: 3rem;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.5rem; }
+    letter-spacing: 0.5rem;
+    border-bottom: 2px solid #ea002a; }
+    @media only screen and (max-width: 40.625em) {
+      .card__heading {
+        align-self: center; } }
   .card__text {
     padding-left: 2rem;
     letter-spacing: 0.08rem;
     font-size: 1.5rem;
     line-height: 2rem; }
+    @media only screen and (max-width: 40.625em) {
+      .card__text {
+        padding-left: 0;
+        text-align: center; } }
 
 .btn-group {
   display: flex;
   align-items: center; }
-  @media only screen and (max-width: 78em) {
+  @media only screen and (max-width: 82em) {
     .btn-group {
       flex-direction: column;
       align-items: stretch; } }
@@ -391,7 +404,7 @@ h2 {
   transition: all 0.2s;
   cursor: pointer;
   position: relative; }
-  @media only screen and (max-width: 78em) {
+  @media only screen and (max-width: 82em) {
     .btn, .btn:link, .btn:visited {
       margin-top: 1.5rem; } }
 
@@ -413,14 +426,47 @@ h2 {
 
 .btn--white {
   background-color: #fbfbfb;
-  color: #ea002a;
   color: #ea002a; }
 
 .btn:not(:last-of-type) {
   margin-right: 2rem; }
-  @media only screen and (max-width: 78em) {
+  @media only screen and (max-width: 82em) {
     .btn:not(:last-of-type) {
       margin-right: 0; } }
+
+.arrow, .arrow:link, .arrow:visited {
+  width: 5rem;
+  height: 5rem;
+  color: #fbfbfb;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 50%;
+  text-align: center;
+  position: relative; }
+
+.arrow__left {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%); }
+
+.arrow__right {
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 50%;
+  transform: translate(62%, -50%); }
+
+.arrow:hover {
+  color: #ea002a;
+  background-color: #fbfbfb; }
+
+.arrow:active {
+  filter: brightness(0.8);
+  transform: translateY(2px); }
 
 .display-container {
   display: flex;
@@ -469,22 +515,17 @@ h2 {
 .session-card {
   position: relative;
   width: 100%;
-  height: 20vw;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 7px 6px #000101;
   cursor: pointer; }
-  @media only screen and (max-width: 56.25em) {
-    .session-card {
-      height: 40vw; } }
   @media only screen and (max-width: 40.625em) {
     .session-card {
       width: 70%; } }
   .session-card__img-box {
     position: relative;
     width: 100%;
-    height: 100%;
-    background-size: cover; }
+    max-height: 100%; }
     .session-card__img-box::before {
       content: "";
       display: block;
@@ -500,6 +541,7 @@ h2 {
     width: 100%;
     height: 100%;
     background-size: cover;
+    background-position: center;
     transition: transform 0.2s;
     backface-visibility: hidden; }
   .session-card__disc {
@@ -517,6 +559,9 @@ h2 {
     border-bottom-left-radius: 10px; }
   .session-card:hover .session-card__disc {
     transform: translate(-7%, 22%) scale(1.02); }
+    @media only screen and (max-width: 56.25em) {
+      .session-card:hover .session-card__disc {
+        transform: translate(-5%, 22%) scale(1.02); } }
   .session-card:hover .session-card__img-box .session-card__img {
     transform: scale(1.05); }
   .session-card:hover .play-button {
@@ -640,7 +685,7 @@ h2 {
   /* Track */ }
   @media only screen and (max-width: 40.625em) {
     .window {
-      padding: 0; } }
+      padding: 5rem 0; } }
   .window::-webkit-scrollbar {
     width: 6px; }
   .window::-webkit-scrollbar-track {
@@ -913,7 +958,8 @@ h2 {
   .header-section h1 {
     font-size: 5rem;
     font-weight: 500;
-    letter-spacing: 1rem; }
+    letter-spacing: 1rem;
+    position: relative; }
   .header-section p {
     font-size: 2.5rem;
     font-weight: 300;
@@ -943,5 +989,6 @@ h2 {
   margin-top: 10rem; }
 
 .recorded-section {
-  margin-top: 10rem;
+  margin-top: 8rem;
+  margin-bottom: 6rem;
   position: relative; }

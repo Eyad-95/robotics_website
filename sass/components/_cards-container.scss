@@ -80,10 +80,16 @@
   }
 
   &__heading {
+    align-self: flex-start;
     font-size: 3rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: $letter-spacing-sub-heading;
+    border-bottom: 2px solid $color-primary-1;
+
+    @include respond(phone) {
+      align-self: center;
+    }
   }
 
   &__text {
@@ -91,5 +97,10 @@
     letter-spacing: 0.08rem;
     font-size: 1.5rem;
     line-height: 2rem;
+
+    @include respond(phone) {
+      padding-left: 0;
+      text-align: center;
+    }
   }
 }

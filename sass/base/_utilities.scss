@@ -40,3 +40,10 @@
     }
   }
 }
+
+.helper-class {
+  &--handouts {
+    display: flex;
+    justify-content: space-between;
+  }
+}

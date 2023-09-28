@@ -21,15 +21,10 @@
 .session-card {
   position: relative;
   width: 100%;
-  height: 20vw;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: $box-shadow-3--light;
   cursor: pointer;
-
-  @include respond(tab-port) {
-    height: 40vw;
-  }
 
   @include respond(phone) {
     width: 70%;
@@ -38,8 +33,7 @@
   &__img-box {
     position: relative;
     width: 100%;
-    height: 100%;
-    background-size: cover;
+    max-height: 100%;
 
     &::before {
       content: "";
@@ -70,6 +64,7 @@
     width: 100%;
     height: 100%;
     background-size: cover;
+    background-position: center;
     transition: transform 0.2s;
     backface-visibility: hidden;
   }
@@ -93,6 +88,10 @@
   & {
     &:hover &__disc {
       transform: translate(-7%, 22%) scale(1.02);
+
+      @include respond(tab-port) {
+        transform: translate(-5%, 22%) scale(1.02);
+      }
     }
 
     &:hover &__img-box &__img {
