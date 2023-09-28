@@ -41,7 +41,7 @@
       <nav class="nav">
         <ul class="nav__nav-list">
           <li class="nav__nav-item active--link">
-            <a href="#" class="nav__nav-link">Workshops</a>
+            <a href="./workshops.html" class="nav__nav-link">Workshops</a>
           </li>
           <li class="nav__nav-item">
             <a href="./mektaro.html" class="nav__nav-link">Mekatro</a>
@@ -85,7 +85,7 @@
 
     <main class="main">
       <header class="header-section">
-        <h1 class="u-margin-bottom-medium">Workshops</h1>
+        <h1 class="u-margin-bottom-medium">Workshop Title</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eaque
           cumque sit accusamus neque. Tempore odio commodi dolorem ullam,
@@ -94,101 +94,370 @@
         </p>
       </header>
 
-      <section class="cards-section">
-        <div class="cards-container">
-          <div class="card">
-            <div class="card__left">
-              <h2 class="card__heading u-margin-bottom-medium">solidwords</h2>
-              <p class="card__text u-margin-bottom-medium">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit,
-                similique! Ipsum fugit repudiandae dignissimos aspernatur
-                architecto nihil, quibusdam expedita culpa est illum excepturi
-                autem ullam rerum quis odio et. Est.
-              </p>
-              <div class="btn-group">
-                <a class="btn btn--red">Participate Now!</a>
-                <a class="btn btn--white" href="./workshops_handouts.html"
-                  >Handouts</a
-                >
-              </div>
+      <section class="carousel-section">
+        <div class="carousel-container">
+          <div class="carousel" id="carousel">
+            <div class="carousel__img-box">
+              <img class="carousel__img" src="../img/test.jpg" alt="" />
             </div>
-            <div class="card__right">
-              <div class="card__content-box">
-                <h3 class="u-margin-bottom-xs">Starts</h3>
-                <p>Feb 16th, 2023</p>
-              </div>
+            <div class="carousel__img-box">
+              <img class="carousel__img" src="../img/test.jpg" alt="" />
+            </div>
+            <div class="carousel__img-box">
+              <img class="carousel__img" src="../img/test.jpg" alt="" />
+            </div>
+            <div class="carousel__img-box">
+              <img class="carousel__img" src="../img/test.jpg" alt="" />
+            </div>
 
-              <div class="card__content-box">
-                <h3 class="u-margin-bottom-xs">location</h3>
-                <p>HQ</p>
-              </div>
+            <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
 
-              <div class="card__content-box">
-                <h3 class="u-margin-bottom-xs">Duration</h3>
-                <p>8 weeks</p>
-              </div>
+            <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+            <!-- <div class="carousel__navigator">
+                <div
+                  class="carousel__navigator-item carousel__navigator-item--active"
+                ></div>
+                <div class="carousel__navigator-item"></div>
+                <div class="carousel__navigator-item"></div>
+                <div class="carousel__navigator-item"></div>
+              </div> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="materials-section">
+        <h1 class="u-margin-bottom-large">Materials Used</h1>
+
+        <div class="window">
+          <div class="project">
+            <div class="project__img-box">
+              <img src="../img/project.jpg" alt="" class="project__img" />
+            </div>
+            <div class="project__disc-box">
+              <h3 class="project__heading u-margin-bottom-medium">
+                Lorem Ipsum
+              </h3>
+              <p class="project__disc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Numquam impedit doloribus quos amet veniam repellat quibusdam
+                harum. Voluptatibus cupiditate, iure architecto error ullam
+                reprehenderit, fugit deleniti debitis, officia natus atque.
+              </p>
             </div>
           </div>
-          <div class="card">
-            <div class="card__left">
-              <h2 class="card__heading u-margin-bottom-medium">PCB Design</h2>
-              <p class="card__text u-margin-bottom-medium">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit,
-                similique! Ipsum fugit repudiandae dignissimos aspernatur
-                architecto nihil, quibusdam expedita culpa est illum excepturi
-                autem ullam rerum quis odio et. Est.
-              </p>
-              <div class="btn-group">
-                <a class="btn btn--red">Participate Now!</a>
-                <a class="btn btn--white">Handouts</a>
-              </div>
+          <div class="project">
+            <div class="project__img-box">
+              <img src="../img/project.jpg" alt="" class="project__img" />
             </div>
-            <div class="card__right">
-              <div class="card__content-box">
-                <h3 class="u-margin-bottom-xs">Starts</h3>
-                <p>Feb 16th, 2023</p>
-              </div>
-
-              <div class="card__content-box">
-                <h3 class="u-margin-bottom-xs">location</h3>
-                <p>HQ</p>
-              </div>
-
-              <div class="card__content-box">
-                <h3 class="u-margin-bottom-xs">Duration</h3>
-                <p>8 weeks</p>
-              </div>
+            <div class="project__disc-box">
+              <h3 class="project__heading u-margin-bottom-medium">
+                Lorem Ipsum
+              </h3>
+              <p class="project__disc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Numquam impedit doloribus quos amet veniam repellat quibusdam
+                harum. Voluptatibus cupiditate, iure architecto error ullam
+                reprehenderit, fugit deleniti debitis, officia natus atque.
+              </p>
             </div>
           </div>
-          <div class="card">
-            <div class="card__left">
-              <h2 class="card__heading u-margin-bottom-medium">ROS</h2>
-              <p class="card__text u-margin-bottom-medium">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit,
-                similique! Ipsum fugit repudiandae dignissimos aspernatur
-                architecto nihil, quibusdam expedita culpa est illum excepturi
-                autem ullam rerum quis odio et. Est.
-              </p>
-              <div class="btn-group">
-                <a class="btn btn--red">Participate Now!</a>
-                <a class="btn btn--white">Handouts</a>
-              </div>
+          <div class="project">
+            <div class="project__img-box">
+              <img src="../img/project.jpg" alt="" class="project__img" />
             </div>
-            <div class="card__right">
-              <div class="card__content-box">
-                <h3 class="u-margin-bottom-xs">Starts</h3>
-                <p>Feb 16th, 2023</p>
+            <div class="project__disc-box">
+              <h3 class="project__heading u-margin-bottom-medium">
+                Lorem Ipsum
+              </h3>
+              <p class="project__disc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Numquam impedit doloribus quos amet veniam repellat quibusdam
+                harum. Voluptatibus cupiditate, iure architecto error ullam
+                reprehenderit, fugit deleniti debitis, officia natus atque.
+              </p>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project__img-box">
+              <img src="../img/project.jpg" alt="" class="project__img" />
+            </div>
+            <div class="project__disc-box">
+              <h3 class="project__heading u-margin-bottom-medium">
+                Lorem Ipsum
+              </h3>
+              <p class="project__disc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Numquam impedit doloribus quos amet veniam repellat quibusdam
+                harum. Voluptatibus cupiditate, iure architecto error ullam
+                reprehenderit, fugit deleniti debitis, officia natus atque.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="recorded-section">
+        <h1 class="u-margin-bottom-large">Recorded Sessions</h1>
+        <div class="sessions-container window">
+          <div class="session-card">
+            <div class="session-card__img-box">
+              <img src="../img/sqr.jpg" alt="" class="session-card__img" />
+
+              <div class="play-button">
+                <div class="circle" x="0" y="0"></div>
+                <div class="icon">
+                  <div
+                    class="white half--1"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                  <div
+                    class="white half--2"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                </div>
               </div>
 
-              <div class="card__content-box">
-                <h3 class="u-margin-bottom-xs">location</h3>
-                <p>HQ</p>
+              <h3 class="session-card__disc">Lorem Ipsum</h3>
+            </div>
+          </div>
+          <div class="session-card">
+            <div class="session-card__img-box">
+              <img src="../img/sqr.jpg" alt="" class="session-card__img" />
+
+              <div class="play-button">
+                <div class="circle" x="0" y="0"></div>
+                <div class="icon">
+                  <div
+                    class="white half--1"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                  <div
+                    class="white half--2"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                </div>
               </div>
 
-              <div class="card__content-box">
-                <h3 class="u-margin-bottom-xs">Duration</h3>
-                <p>8 weeks</p>
+              <h3 class="session-card__disc">Lorem Ipsum</h3>
+            </div>
+          </div>
+          <div class="session-card">
+            <div class="session-card__img-box">
+              <img src="../img/sqr.jpg" alt="" class="session-card__img" />
+
+              <div class="play-button">
+                <div class="circle" x="0" y="0"></div>
+                <div class="icon">
+                  <div
+                    class="white half--1"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                  <div
+                    class="white half--2"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                </div>
               </div>
+
+              <h3 class="session-card__disc">Lorem Ipsum</h3>
+            </div>
+          </div>
+          <div class="session-card">
+            <div class="session-card__img-box">
+              <img src="../img/sqr.jpg" alt="" class="session-card__img" />
+
+              <div class="play-button">
+                <div class="circle" x="0" y="0"></div>
+                <div class="icon">
+                  <div
+                    class="white half--1"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                  <div
+                    class="white half--2"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                </div>
+              </div>
+
+              <h3 class="session-card__disc">Lorem Ipsum</h3>
+            </div>
+          </div>
+          <div class="session-card">
+            <div class="session-card__img-box">
+              <img src="../img/sqr.jpg" alt="" class="session-card__img" />
+
+              <div class="play-button">
+                <div class="circle" x="0" y="0"></div>
+                <div class="icon">
+                  <div
+                    class="white half--1"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                  <div
+                    class="white half--2"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                </div>
+              </div>
+
+              <h3 class="session-card__disc">Lorem Ipsum</h3>
+            </div>
+          </div>
+          <div class="session-card">
+            <div class="session-card__img-box">
+              <img src="../img/sqr.jpg" alt="" class="session-card__img" />
+
+              <div class="play-button">
+                <div class="circle" x="0" y="0"></div>
+                <div class="icon">
+                  <div
+                    class="white half--1"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                  <div
+                    class="white half--2"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                </div>
+              </div>
+
+              <h3 class="session-card__disc">Lorem Ipsum</h3>
+            </div>
+          </div>
+          <div class="session-card">
+            <div class="session-card__img-box">
+              <img src="../img/sqr.jpg" alt="" class="session-card__img" />
+
+              <div class="play-button">
+                <div class="circle" x="0" y="0"></div>
+                <div class="icon">
+                  <div
+                    class="white half--1"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                  <div
+                    class="white half--2"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                </div>
+              </div>
+
+              <h3 class="session-card__disc">Lorem Ipsum</h3>
+            </div>
+          </div>
+          <div class="session-card">
+            <div class="session-card__img-box">
+              <img src="../img/sqr.jpg" alt="" class="session-card__img" />
+
+              <div class="play-button">
+                <div class="circle" x="0" y="0"></div>
+                <div class="icon">
+                  <div
+                    class="white half--1"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                  <div
+                    class="white half--2"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                </div>
+              </div>
+
+              <h3 class="session-card__disc">Lorem Ipsum</h3>
+            </div>
+          </div>
+          <div class="session-card">
+            <div class="session-card__img-box">
+              <img src="../img/sqr.jpg" alt="" class="session-card__img" />
+
+              <div class="play-button">
+                <div class="circle" x="0" y="0"></div>
+                <div class="icon">
+                  <div
+                    class="white half--1"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                  <div
+                    class="white half--2"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                    fill="#fff"
+                  ></div>
+                </div>
+              </div>
+
+              <h3 class="session-card__disc">Lorem Ipsum</h3>
             </div>
           </div>
         </div>

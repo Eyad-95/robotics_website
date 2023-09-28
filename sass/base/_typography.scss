@@ -3,6 +3,13 @@ body {
   color: $color-white;
 }
 
+h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  letter-spacing: $letter-spacing-heading;
+  text-align: center;
+}
+
 .heading-secondary {
   color: $color-primary-1;
   font-size: 3.5rem;

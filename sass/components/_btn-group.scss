@@ -49,11 +49,16 @@
 
   &--red {
     background-color: $color-primary-1;
+    color: $color-white;
   }
 
   &--white {
     background-color: $color-white;
     color: $color-primary-1;
+    color: $color-primary-1;
+  }
+
+  &--arrow {
   }
 
   &:not(:last-of-type) {

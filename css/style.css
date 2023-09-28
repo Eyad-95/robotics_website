@@ -46,6 +46,12 @@ body {
   font-family: "Lato", sans-serif, sans-serif;
   color: #fbfbfb; }
 
+h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  letter-spacing: 1rem;
+  text-align: center; }
+
 .heading-secondary {
   color: #ea002a;
   font-size: 3.5rem;
@@ -73,6 +79,12 @@ h2 {
 
 .u-margin-bottom-medium {
   margin-bottom: 2.5rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 5.5rem !important; }
+
+.u-margin-bottom-large {
+  margin-bottom: 7.5rem !important; }
 
 .hidden {
   display: none; }
@@ -396,10 +408,12 @@ h2 {
   box-shadow: 0 0.5rem 1rem rgba(0, 1, 1, 0.2); }
 
 .btn--red {
-  background-color: #ea002a; }
+  background-color: #ea002a;
+  color: #fbfbfb; }
 
 .btn--white {
   background-color: #fbfbfb;
+  color: #ea002a;
   color: #ea002a; }
 
 .btn:not(:last-of-type) {
@@ -439,9 +453,8 @@ h2 {
 
 .sessions-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   justify-content: center;
-  align-content: center;
   justify-items: center;
   align-items: center;
   gap: 6.5rem;
@@ -470,7 +483,8 @@ h2 {
   .session-card__img-box {
     position: relative;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    background-size: cover; }
     .session-card__img-box::before {
       content: "";
       display: block;
@@ -617,6 +631,24 @@ h2 {
       .project:nth-child(2n) .project__img-box {
         order: 0;
         margin-left: 0; } }
+
+.window {
+  max-height: 40vw;
+  padding: 5rem;
+  overflow-y: scroll;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Track */ }
+  @media only screen and (max-width: 40.625em) {
+    .window {
+      padding: 0; } }
+  .window::-webkit-scrollbar {
+    width: 6px; }
+  .window::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+  .window::-webkit-scrollbar-thumb {
+    background-color: #ea002a; }
+  .window::-webkit-scrollbar-thumb:hover {
+    background: #ea002bad; }
 
 .header {
   display: flex;
@@ -816,8 +848,7 @@ h2 {
 .main-section {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  margin-top: -8rem; }
+  text-align: center; }
   .main-section__intro {
     width: 100%;
     margin-bottom: 5rem; }
@@ -907,3 +938,10 @@ h2 {
   @media only screen and (max-width: 40.625em) {
     .projects-section {
       margin: 10rem 0 6rem 0; } }
+
+.carousel-section {
+  margin-top: 10rem; }
+
+.recorded-section {
+  margin-top: 10rem;
+  position: relative; }
