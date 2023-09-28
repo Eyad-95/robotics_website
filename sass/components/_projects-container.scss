@@ -23,6 +23,7 @@
       50px 50px 0 -40px $color-primary-1;
     margin-right: 10%;
     overflow: hidden;
+    cursor: pointer;
 
     @include respond(phone) {
       margin-bottom: 6rem;

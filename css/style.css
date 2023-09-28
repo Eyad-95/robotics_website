@@ -629,7 +629,8 @@ h2 {
     height: 100%;
     box-shadow: -50px -50px 0 -40px #ea002a, 50px 50px 0 -40px #ea002a;
     margin-right: 10%;
-    overflow: hidden; }
+    overflow: hidden;
+    cursor: pointer; }
     @media only screen and (max-width: 40.625em) {
       .project__img-box {
         margin-bottom: 6rem;
@@ -869,6 +870,23 @@ h2 {
     letter-spacing: 0.25rem;
     color: #ea002a;
     filter: brightness(70%); }
+
+.project-container {
+  display: flex; }
+
+.column__left {
+  display: flex;
+  flex-direction: column;
+  width: 50%; }
+
+.column__right {
+  width: 50%; }
+  .column__right .img-box {
+    width: 100%; }
+  .column__right .img {
+    width: 100%;
+    height: 100%;
+    background-size: cover; }
 
 .carouselcounter-section {
   margin-top: 4rem;
