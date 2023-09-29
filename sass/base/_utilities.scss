@@ -45,5 +45,10 @@
   &--handouts {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
+}
+
+.posToBottom {
+  bottom: 0;
 }
