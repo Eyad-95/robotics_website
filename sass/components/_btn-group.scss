@@ -72,7 +72,7 @@
   &:link,
   &:visited {
     width: 5rem;
-    height: 5rem;
+    min-height: 5rem;
     color: $color-white;
     outline: none;
     text-decoration: none;

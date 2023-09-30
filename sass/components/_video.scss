@@ -1,12 +1,53 @@
 .video {
+  position: relative;
   display: flex;
 
+  @include respond(xs-phone) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 3.5rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 5rem;
+    }
+  }
+
   & .project__img-box {
-    width: 30%;
+    width: 45%;
     margin-right: 2rem !important;
+    box-shadow: -20px -20px 0 -13px #ea002a, 16px 16px 0 -10px #ea002a;
+
+    @include respond(tab-port) {
+      margin-right: 5rem !important;
+    }
+
+    @include respond(xs-phone) {
+      margin-right: 0 !important;
+    }
   }
 
   &__disc {
     width: 70%;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    letter-spacing: 1px;
+
+    @include respond(tab-port) {
+      align-self: center;
+      width: 100%;
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+
+    @include respond(phone) {
+      align-self: flex-start;
+    }
+
+    @include respond(xs-phone) {
+      text-align: center;
+    }
   }
 }

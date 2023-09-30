@@ -172,7 +172,7 @@ h2 {
   cursor: pointer;
   opacity: 0.5;
   transition: opacity 100ms;
-  z-index: 100; }
+  z-index: 10; }
 
 .slide-arrow:hover,
 .slide-arrow:focus {
@@ -454,7 +454,7 @@ h2 {
   z-index: 100; }
   .arrow, .arrow:link, .arrow:visited {
     width: 5rem;
-    height: 5rem;
+    min-height: 5rem;
     color: #fbfbfb;
     outline: none;
     text-decoration: none;
@@ -588,46 +588,32 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  width: 8rem;
+  height: 8rem;
   z-index: 2;
   transition: all 0.2s; }
   .play-button:hover {
     transform: translate(-50%, -52%); }
   .play-button:active {
     transform: translate(-50%, -50%); }
+    .play-button:active .circle {
+      filter: brightness(90%); }
 
 .circle {
   background: #ea002a;
   border-radius: 50%;
   box-shadow: 0 1px 2.2px rgba(0, 0, 0, 0.051), 0 2.3px 5.3px rgba(0, 0, 0, 0.059), 0 4.4px 10px rgba(0, 0, 0, 0.06), 0 7.8px 17.9px rgba(0, 0, 0, 0.059), 0 14.6px 33.4px rgba(0, 0, 0, 0.059), 0 35px 80px rgba(0, 0, 0, 0.07);
-  height: 8rem;
+  height: 100%;
   position: absolute;
-  width: 8rem; }
-
-.play-button:active .circle {
-  filter: brightness(90%); }
+  width: 100%; }
 
 .icon {
-  height: 20rem;
-  transform: rotate(-120deg);
-  transition: transform 500ms;
-  width: 20rem; }
-
-.white {
-  background: white;
-  height: 20rem;
   position: absolute;
-  width: 20rem; }
-
-.half--1 {
-  clip-path: polygon(43.77666% 55.85251%, 43.77874% 55.46331%, 43.7795% 55.09177%, 43.77934% 54.74844%, 43.77855% 54.44389%, 43.77741% 54.18863%, 43.77625% 53.99325%, 43.77533% 53.86828%, 43.77495% 53.82429%, 43.77518% 53.55329%, 43.7754% 53.2823%, 43.77563% 53.01131%, 43.77585% 52.74031%, 43.77608% 52.46932%, 43.7763% 52.19832%, 43.77653% 51.92733%, 43.77675% 51.65633%, 43.77653% 51.38533%, 43.7763% 51.11434%, 43.77608% 50.84334%, 43.77585% 50.57235%, 43.77563% 50.30136%, 43.7754% 50.03036%, 43.77518% 49.75936%, 43.77495% 49.48837%, 44.48391% 49.4885%, 45.19287% 49.48865%, 45.90183% 49.48878%, 46.61079% 49.48892%, 47.31975% 49.48906%, 48.0287% 49.4892%, 48.73766% 49.48934%, 49.44662% 49.48948%, 50.72252% 49.48934%, 51.99842% 49.4892%, 53.27432% 49.48906%, 54.55022% 49.48892%, 55.82611% 49.48878%, 57.10201% 49.48865%, 58.3779% 49.4885%, 59.6538% 49.48837%, 59.57598% 49.89151%, 59.31883% 50.28598%, 58.84686% 50.70884%, 58.12456% 51.19714%, 57.11643% 51.78793%, 55.78697% 52.51828%, 54.10066% 53.42522%, 52.02202% 54.54581%, 49.96525% 55.66916%, 48.3319% 56.57212%, 47.06745% 57.27347%, 46.11739% 57.79191%, 45.42719% 58.14619%, 44.94235% 58.35507%, 44.60834% 58.43725%, 44.37066% 58.41149%, 44.15383% 58.27711%, 43.99617% 58.0603%, 43.88847% 57.77578%, 43.82151% 57.43825%, 43.78608% 57.06245%, 43.77304% 56.66309%, 43.773% 56.25486%);
-  transition: clip-path 500ms; }
-
-.half--2 {
-  clip-path: polygon(43.77666% 43.83035%, 43.77874% 44.21955%, 43.7795% 44.59109%, 43.77934% 44.93442%, 43.77855% 45.23898%, 43.77741% 45.49423%, 43.77625% 45.68961%, 43.77533% 45.81458%, 43.77495% 45.85858%, 43.77518% 46.12957%, 43.7754% 46.40056%, 43.77563% 46.67156%, 43.77585% 46.94255%, 43.77608% 47.21355%, 43.7763% 47.48454%, 43.77653% 47.75554%, 43.77675% 48.02654%, 43.77653% 48.29753%, 43.7763% 48.56852%, 43.77608% 48.83952%, 43.77585% 49.11051%, 43.77563% 49.38151%, 43.7754% 49.65251%, 43.77518% 49.9235%, 43.77495% 50.1945%, 44.48391% 50.19436%, 45.19287% 50.19422%, 45.90183% 50.19408%, 46.61079% 50.19394%, 47.31975% 50.1938%, 48.0287% 50.19366%, 48.73766% 50.19353%, 49.44662% 50.19338%, 50.72252% 50.19353%, 51.99842% 50.19366%, 53.27432% 50.1938%, 54.55022% 50.19394%, 55.82611% 50.19408%, 57.10201% 50.19422%, 58.3779% 50.19436%, 59.6538% 50.1945%, 59.57598% 49.79136%, 59.31883% 49.39688%, 58.84686% 48.97402%, 58.12456% 48.48572%, 57.11643% 47.89493%, 55.78697% 47.16458%, 54.10066% 46.25764%, 52.02202% 45.13705%, 49.96525% 44.01371%, 48.3319% 43.11074%, 47.06745% 42.4094%, 46.11739% 41.89096%, 45.42719% 41.53667%, 44.94235% 41.3278%, 44.60834% 41.24561%, 44.37066% 41.27137%, 44.15383% 41.40575%, 43.99617% 41.62256%, 43.88847% 41.90709%, 43.82151% 42.24461%, 43.78608% 42.62041%, 43.77304% 43.01978%, 43.773% 43.428%);
-  transition: clip-path 500ms; }
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -50%);
+  height: 5rem;
+  width: 5rem; }
 
 .project {
   display: flex;
@@ -716,12 +702,44 @@ h2 {
     background: #ea002bad; }
 
 .video {
+  position: relative;
   display: flex; }
+  @media only screen and (max-width: 25em) {
+    .video {
+      flex-direction: column;
+      align-items: center; } }
+  .video:not(:last-of-type) {
+    margin-bottom: 3.5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .video:not(:last-of-type) {
+        margin-bottom: 5rem; } }
   .video .project__img-box {
-    width: 30%;
-    margin-right: 1rem !important; }
+    width: 45%;
+    margin-right: 2rem !important;
+    box-shadow: -20px -20px 0 -13px #ea002a, 16px 16px 0 -10px #ea002a; }
+    @media only screen and (max-width: 56.25em) {
+      .video .project__img-box {
+        margin-right: 5rem !important; } }
+    @media only screen and (max-width: 25em) {
+      .video .project__img-box {
+        margin-right: 0 !important; } }
   .video__disc {
-    width: 70%; }
+    width: 70%;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    letter-spacing: 1px; }
+    @media only screen and (max-width: 56.25em) {
+      .video__disc {
+        align-self: center;
+        width: 100%;
+        font-size: 2rem;
+        line-height: 3rem; } }
+    @media only screen and (max-width: 40.625em) {
+      .video__disc {
+        align-self: flex-start; } }
+    @media only screen and (max-width: 25em) {
+      .video__disc {
+        text-align: center; } }
 
 .header {
   display: flex;
@@ -798,6 +816,45 @@ h2 {
   @media only screen and (max-width: 68.75em) {
     .nav {
       display: none; } }
+
+.nav-collapsed {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #ea002a;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .nav-collapsed__nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 200;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    list-style: none; }
+  .nav-collapsed__nav-item {
+    display: inline-block; }
+    .nav-collapsed__nav-item:not(:last-of-type) {
+      margin-bottom: 1.5rem; }
+  .nav-collapsed__nav-link:link, .nav-collapsed__nav-link:visited {
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    color: #fbfbfb;
+    transition: all 0.3s;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+    background-size: 230%; }
+    .nav-collapsed__nav-link:link:hover, .nav-collapsed__nav-link:visited:hover {
+      background-position: 100%;
+      color: #ea002a;
+      transform: translateX(0.5rem); }
+  .nav-collapsed__nav-item:hover {
+    cursor: pointer; }
 
 .footer {
   width: 100%;
@@ -913,13 +970,17 @@ h2 {
 
 .session-container {
   display: flex;
-  margin-bottom: 10rem; }
+  margin-bottom: 5rem; }
   @media only screen and (max-width: 56.25em) {
     .session-container {
       flex-direction: column;
       align-items: center; } }
   .session-container .column__left {
-    width: 70%; }
+    width: 70%;
+    margin-right: 4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .session-container .column__left {
+        margin-right: 0; } }
     .session-container .column__left h1 {
       color: #ea002a; }
     .session-container .column__left p {
@@ -930,9 +991,22 @@ h2 {
   .session-container .column__right {
     width: 30%;
     align-self: flex-start; }
+    @media only screen and (max-width: 56.25em) {
+      .session-container .column__right {
+        align-self: center;
+        width: 80%;
+        margin-top: 5rem; } }
+    .session-container .column__right .play-button {
+      height: 3rem;
+      width: 3rem; }
+      .session-container .column__right .play-button .icon {
+        width: 60%;
+        height: 60%; }
   .session-container .window {
     width: 100%;
-    min-height: 50vh; }
+    height: 100%;
+    min-height: 30rem;
+    aspect-ratio: 16 / 9; }
 
 .column__left {
   display: flex;
