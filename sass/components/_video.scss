@@ -1,0 +1,12 @@
+.video {
+  display: flex;
+
+  & .project__img-box {
+    width: 30%;
+    margin-right: 2rem !important;
+  }
+
+  &__disc {
+    width: 70%;
+  }
+}

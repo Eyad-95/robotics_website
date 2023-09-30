@@ -9,14 +9,15 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Robotics</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Document</title>
   </head>
 
   <body>
     <header class="header">
       <!-- <img src="./img/logo-bg.png" alt="" class="header__logo--1" /> -->
-      <a href="#">
+
+      <a href="../index.html">
         <svg
           class="header__logo--1"
           xmlns="http://www.w3.org/2000/svg"
@@ -40,21 +41,19 @@
       <nav class="nav">
         <ul class="nav__nav-list">
           <li class="nav__nav-item">
-            <a href="./html/workshops.html" class="nav__nav-link">Workshops</a>
+            <a href="./workshops.html" class="nav__nav-link">Workshops</a>
           </li>
           <li class="nav__nav-item">
-            <a href="./html/mektaro.html" class="nav__nav-link">Mekatro</a>
+            <a href="./mektaro.html" class="nav__nav-link">Mekatro</a>
           </li>
           <li class="nav__nav-item">
-            <a href="./html/competitions.html" class="nav__nav-link"
-              >Competitions</a
-            >
+            <a href="./competitions.html" class="nav__nav-link">Competitions</a>
+          </li>
+          <li class="nav__nav-item active--link">
+            <a href="#" class="nav__nav-link">Projects</a>
           </li>
           <li class="nav__nav-item">
-            <a href="./html/projects.html" class="nav__nav-link">Projects</a>
-          </li>
-          <li class="nav__nav-item">
-            <a href="./html/about.html" class="nav__nav-link">About</a>
+            <a href="./about.html" class="nav__nav-link">About</a>
           </li>
         </ul>
       </nav>
@@ -84,154 +83,58 @@
       </div>
     </header>
 
-    <main class="main u-margin-bottom-big">
-      <section class="carouselcounter-section">
-        <div class="carousel-container">
-          <div class="carousel" id="carousel">
-            <div class="carousel__img-box">
-              <img class="carousel__img" src="img/test.jpg" alt="" />
+    <main class="main">
+      <div class="session-container">
+        <div class="column__left">
+          <div class="window u-margin-bottom-medium">
+            <a href="./mekatro_session.html" class="play-button">
+              <div class="circle" x="0" y="0"></div>
+              <div class="icon">
+                <div
+                  class="white half--1"
+                  x="0"
+                  y="0"
+                  width="200"
+                  height="200"
+                  fill="#fff"
+                ></div>
+                <div
+                  class="white half--2"
+                  x="0"
+                  y="0"
+                  width="200"
+                  height="200"
+                  fill="#fff"
+                ></div>
+              </div>
+            </a>
+          </div>
+          <h1 class="u-margin-bottom-medium helper-class--handouts">Title</h1>
+          <p class="text--big">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
+            nesciunt similique, non voluptatum sapiente tempore nam, voluptates
+            error voluptatibus dolorem ipsa ex ratione! Sed ratione suscipit
+            temporibus expedita? Itaque, ipsa.
+          </p>
+          <a href="./projects.html" class="arrow"
+            ><span class="arrow__left"><</span></a
+          >
+        </div>
+        <div class="column__right">
+          <div class="video">
+            <div class="project__img-box">
+              <img src="../img/project.jpg" alt="" class="project__img" />
             </div>
-            <div class="carousel__img-box">
-              <img class="carousel__img" src="img/test.jpg" alt="" />
-            </div>
-            <div class="carousel__img-box">
-              <img class="carousel__img" src="img/test.jpg" alt="" />
-            </div>
-            <div class="carousel__img-box">
-              <img class="carousel__img" src="img/test.jpg" alt="" />
-            </div>
-
-            <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
-
-            <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
-            <!-- <div class="carousel__navigator">
-              <div
-                class="carousel__navigator-item carousel__navigator-item--active"
-              ></div>
-              <div class="carousel__navigator-item"></div>
-              <div class="carousel__navigator-item"></div>
-              <div class="carousel__navigator-item"></div>
-            </div> -->
-          </div>
-        </div>
-
-        <div class="counter">
-          <div class="counter__column">
-            <span class="counter__number">60</span
-            ><span class="counter__disc">Members</span>
-          </div>
-          <div class="counter__column">
-            <span class="counter__number">200</span
-            ><span class="counter__disc">Participants</span>
-          </div>
-          <div class="counter__column">
-            <span class="counter__number">30</span
-            ><span class="counter__disc">Projects</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="posts-section">
-        <div class="post">
-          <div class="post__img-box">
-            <img src="img/test1.jpg" alt="" class="post__img" />
-          </div>
-
-          <div class="post__text-container">
-            <h2 class="heading-secondary u-margin-bottom-small">Lorem ipsum</h2>
-
-            <p class="text--small">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
-              consectetur exercitationem corrupti voluptate alias placeat,
-              voluptates minus facilis autem accusamus. Perferendis alias natus
-              maiores, cumque aperiam voluptates voluptas sapiente pariatur!
+            <p class="video__disc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              massa metus
             </p>
           </div>
         </div>
-        <div class="post">
-          <div class="post__img-box">
-            <img src="img/test1.jpg" alt="" class="post__img" />
-          </div>
-
-          <div class="post__text-container">
-            <h2 class="heading-secondary u-margin-bottom-small">Lorem ipsum</h2>
-
-            <p class="text--small">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
-              consectetur exercitationem corrupti voluptate alias placeat,
-              voluptates minus facilis autem accusamus. Perferendis alias natus
-              maiores, cumque aperiam voluptates voluptas sapiente pariatur!
-            </p>
-          </div>
-        </div>
-        <div class="post">
-          <div class="post__img-box">
-            <img src="img/test1.jpg" alt="" class="post__img" />
-          </div>
-
-          <div class="post__text-container">
-            <h2 class="heading-secondary u-margin-bottom-small">Lorem ipsum</h2>
-
-            <p class="text--small">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
-              consectetur exercitationem corrupti voluptate alias placeat,
-              voluptates minus facilis autem accusamus. Perferendis alias natus
-              maiores, cumque aperiam voluptates voluptas sapiente pariatur!
-            </p>
-          </div>
-        </div>
-        <div class="post">
-          <div class="post__img-box">
-            <img src="img/test1.jpg" alt="" class="post__img" />
-          </div>
-
-          <div class="post__text-container">
-            <h2 class="heading-secondary u-margin-bottom-small">Lorem ipsum</h2>
-
-            <p class="text--small">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
-              consectetur exercitationem corrupti voluptate alias placeat,
-              voluptates minus facilis autem accusamus. Perferendis alias natus
-              maiores, cumque aperiam voluptates voluptas sapiente pariatur!
-            </p>
-          </div>
-        </div>
-        <div class="post">
-          <div class="post__img-box">
-            <img src="img/test1.jpg" alt="" class="post__img" />
-          </div>
-
-          <div class="post__text-container">
-            <h2 class="heading-secondary u-margin-bottom-small">Lorem ipsum</h2>
-
-            <p class="text--small">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
-              consectetur exercitationem corrupti voluptate alias placeat,
-              voluptates minus facilis autem accusamus. Perferendis alias natus
-              maiores, cumque aperiam voluptates voluptas sapiente pariatur!
-            </p>
-          </div>
-        </div>
-        <div class="post">
-          <div class="post__img-box">
-            <img src="img/test1.jpg" alt="" class="post__img" />
-          </div>
-
-          <div class="post__text-container">
-            <h2 class="heading-secondary u-margin-bottom-small">Lorem ipsum</h2>
-
-            <p class="text--small">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
-              consectetur exercitationem corrupti voluptate alias placeat,
-              voluptates minus facilis autem accusamus. Perferendis alias natus
-              maiores, cumque aperiam voluptates voluptas sapiente pariatur!
-            </p>
-          </div>
-        </div>
-      </section>
+      </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer posToBottom">
       <!-- <img src="./img/logo-bg.png" alt="" class="footer__logo" /> -->
 
       <svg
@@ -259,7 +162,6 @@
         <a class="footer__icon footer__icon--3" href="whatsapp.com"></a>
       </div>
     </footer>
-
-    <script src="./js/script.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

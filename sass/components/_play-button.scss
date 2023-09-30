@@ -8,6 +8,14 @@
   justify-content: center;
   z-index: 2;
   transition: all 0.2s;
+
+  &:hover {
+    transform: translate(-50%, -52%);
+  }
+
+  &:active {
+    transform: translate(-50%, -50%);
+  }
 }
 
 .circle {
