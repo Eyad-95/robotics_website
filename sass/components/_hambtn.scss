@@ -3,16 +3,16 @@
   right: 0;
   height: 5rem;
   width: 5rem;
-  border: 1px solid $color-grey-2;
   border-radius: 8px;
   padding: 0.5rem 0;
+  z-index: 1000;
 
   &__line {
     position: relative;
     background-color: $color-white;
     border-radius: 50px;
-    width: 3rem;
-    height: 2px;
+    width: 4rem;
+    height: 3.5px;
     top: 44%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -25,8 +25,8 @@
     display: block;
     background-color: $color-white;
     border-radius: 50px;
-    width: 3rem;
-    height: 2px;
+    width: 4rem;
+    height: 3.5px;
     transition: all 0.1s;
   }
 
@@ -42,21 +42,26 @@
     top: 2rem;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  &:hover &__line {
-    transform: translate(-50%, 20%) rotate(45deg);
-  }
-
-  &:hover::before {
-    display: none;
-  }
-
-  &:hover::after {
-    transform: translate(-50%, -200%) rotate(-45deg);
+    height: 4px;
   }
 
   @include respond(in-between-tab) {
     display: inline-block;
+  }
+}
+
+.ham-btn--toggled {
+  right: 4.5rem;
+  .ham-btn__line {
+    transform: translate(-50%, 20%) rotate(45deg);
+  }
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    transform: translate(-50%, -145%) rotate(-45deg);
+    height: 3.5px;
   }
 }
