@@ -10,10 +10,11 @@
     />
 
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Document</title>
+    <title>Handouts</title>
   </head>
 
   <body>
+    <!-- HEADER -->
     <header class="header">
       <a href="../index.html">
         <svg
@@ -36,13 +37,14 @@
         </svg>
       </a>
 
+      <!-- MAIN NAVBAR -->
       <nav class="nav">
         <ul class="nav__nav-list">
           <li class="nav__nav-item active--link">
             <a href="./workshops.html" class="nav__nav-link">Workshops</a>
           </li>
           <li class="nav__nav-item">
-            <a href="./mektaro.html" class="nav__nav-link">Mekatro</a>
+            <a href="./mekatro.html" class="nav__nav-link">Mekatro</a>
           </li>
           <li class="nav__nav-item">
             <a href="./competitions.html" class="nav__nav-link">Competitions</a>
@@ -56,12 +58,43 @@
         </ul>
       </nav>
 
-      <div class="ham-btn hidden">
+      <!-- NAVBAR COLLAPSED -->
+      <nav class="nav-collapsed" id="nav-collapsed">
+        <ul class="nav-collapsed__nav-list" id="nav-collapsed__nav-list">
+          <li class="nav-collapsed__nav-item">
+            <a href="./workshops.html" class="nav-collapsed__nav-link"
+              >01 Workshops</a
+            >
+          </li>
+          <li class="nav-collapsed__nav-item">
+            <a href="./mekatro.html" class="nav-collapsed__nav-link"
+              >02 Mekatro</a
+            >
+          </li>
+          <li class="nav-collapsed__nav-item">
+            <a href="./competitions.html" class="nav-collapsed__nav-link"
+              >03 Competitions</a
+            >
+          </li>
+          <li class="nav-collapsed__nav-item">
+            <a href="./projects.html" class="nav-collapsed__nav-link"
+              >04 Projects</a
+            >
+          </li>
+          <li class="nav-collapsed__nav-item">
+            <a href="./about.html" class="nav-collapsed__nav-link">05 About</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- HAM-BUTTON -->
+      <div class="ham-btn hidden" id="toggle-nav-button">
         <div class="ham-btn__line"></div>
       </div>
     </header>
 
     <main class="main">
+      <!-- HEADER-SECTION -->
       <header class="header-section">
         <h1 class="u-margin-bottom-medium helper-class--handouts">
           <a href="" class="arrow"><span class="arrow__left"><</span></a>
@@ -77,6 +110,7 @@
         <a href="#" class="btn btn--red">Participate Now!</a>
       </header>
 
+      <!-- CAROUSEL-SECTION -->
       <section class="carousel-section">
         <div class="carousel-container">
           <div class="carousel" id="carousel">
@@ -96,22 +130,17 @@
             <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
 
             <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
-            <!-- <div class="carousel__navigator">
-                <div
-                  class="carousel__navigator-item carousel__navigator-item--active"
-                ></div>
-                <div class="carousel__navigator-item"></div>
-                <div class="carousel__navigator-item"></div>
-                <div class="carousel__navigator-item"></div>
-              </div> -->
           </div>
         </div>
       </section>
 
+      <!-- MATERIALS-SECTION -->
       <section class="materials-section">
         <h1 class="u-margin-bottom-large">Materials Used</h1>
 
+        <!-- WINDOW -->
         <div class="window">
+          <!-- PROJECT 1 -->
           <div class="project">
             <div class="project__img-box">
               <img src="../img/project.jpg" alt="" class="project__img" />
@@ -128,6 +157,8 @@
               </p>
             </div>
           </div>
+
+          <!-- PROJECT 2 -->
           <div class="project">
             <div class="project__img-box">
               <img src="../img/project.jpg" alt="" class="project__img" />
@@ -144,6 +175,8 @@
               </p>
             </div>
           </div>
+
+          <!-- PROJECT 3 -->
           <div class="project">
             <div class="project__img-box">
               <img src="../img/project.jpg" alt="" class="project__img" />
@@ -160,6 +193,8 @@
               </p>
             </div>
           </div>
+
+          <!-- PROJECT 4 -->
           <div class="project">
             <div class="project__img-box">
               <img src="../img/project.jpg" alt="" class="project__img" />
@@ -179,9 +214,13 @@
         </div>
       </section>
 
+      <!-- RECORDED SESSIONS SECTION -->
       <section class="recorded-section">
         <h1 class="u-margin-bottom-large">Recorded Sessions</h1>
+
+        <!-- WINDOW -->
         <div class="sessions-container window">
+          <!-- RECORDED SESSION 1 -->
           <div class="session-card">
             <div class="session-card__img-box">
               <img src="../img/sqr.jpg" alt="" class="session-card__img" />
@@ -207,6 +246,8 @@
               <h3 class="session-card__disc">Lorem Ipsum</h3>
             </div>
           </div>
+
+          <!-- RECORDED SESSION 2 -->
           <div class="session-card">
             <div class="session-card__img-box">
               <img src="../img/sqr.jpg" alt="" class="session-card__img" />
@@ -232,6 +273,8 @@
               <h3 class="session-card__disc">Lorem Ipsum</h3>
             </div>
           </div>
+
+          <!-- RECORDED SESSION 3 -->
           <div class="session-card">
             <div class="session-card__img-box">
               <img src="../img/sqr.jpg" alt="" class="session-card__img" />
@@ -257,6 +300,8 @@
               <h3 class="session-card__disc">Lorem Ipsum</h3>
             </div>
           </div>
+
+          <!-- RECORDED SESSION 4 -->
           <div class="session-card">
             <div class="session-card__img-box">
               <img src="../img/sqr.jpg" alt="" class="session-card__img" />
@@ -282,6 +327,8 @@
               <h3 class="session-card__disc">Lorem Ipsum</h3>
             </div>
           </div>
+
+          <!-- RECORDED SESSION 5 -->
           <div class="session-card">
             <div class="session-card__img-box">
               <img src="../img/sqr.jpg" alt="" class="session-card__img" />
@@ -307,6 +354,8 @@
               <h3 class="session-card__disc">Lorem Ipsum</h3>
             </div>
           </div>
+
+          <!-- RECORDED SESSION 6 -->
           <div class="session-card">
             <div class="session-card__img-box">
               <img src="../img/sqr.jpg" alt="" class="session-card__img" />
@@ -336,9 +385,8 @@
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
-      <!-- <img src="./img/logo-bg.png" alt="" class="footer__logo" /> -->
-
       <svg
         class="footer__logo"
         xmlns="http://www.w3.org/2000/svg"

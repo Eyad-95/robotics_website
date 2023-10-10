@@ -95,6 +95,12 @@ h2 {
 .u-margin-bottom-large {
   margin-bottom: 7.5rem !important; }
 
+.u-margin-0 {
+  margin: 0 !important; }
+
+.u-padding-0 {
+  padding: 0 !important; }
+
 .hidden {
   display: none; }
 
@@ -113,6 +119,21 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+
+.helper-class--ham-btn {
+  right: 3rem !important;
+  top: 4rem !important; }
+  .helper-class--ham-btn::after, .helper-class--ham-btn::before,
+  .helper-class--ham-btn .ham-btn__line {
+    width: 3rem !important;
+    height: 5px !important; }
+    @media only screen and (max-width: 68.75em) {
+      .helper-class--ham-btn::after, .helper-class--ham-btn::before,
+      .helper-class--ham-btn .ham-btn__line {
+        width: 3.5rem !important;
+        height: 4.5px !important; } }
+  .helper-class--ham-btn::after {
+    top: 2rem !important; }
 
 .posToBottom {
   bottom: 0; }
@@ -280,19 +301,21 @@ h2 {
     filter: brightness(1.05); }
 
 .ham-btn {
-  position: absolute;
-  right: 0;
+  position: fixed;
+  right: 3rem;
+  top: 4rem;
   height: 5rem;
   width: 5rem;
   border-radius: 8px;
   padding: 0.5rem 0;
-  z-index: 1000; }
+  z-index: 1000;
+  cursor: pointer; }
   .ham-btn__line {
     position: relative;
     background-color: #fbfbfb;
     border-radius: 50px;
-    width: 4rem;
-    height: 3.5px;
+    width: 3.5rem;
+    height: 4.5px;
     top: 44%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -302,8 +325,8 @@ h2 {
     display: block;
     background-color: #fbfbfb;
     border-radius: 50px;
-    width: 4rem;
-    height: 3.5px;
+    width: 3.5rem;
+    height: 4.5px;
     transition: all 0.1s; }
   .ham-btn::before {
     position: relative;
@@ -314,21 +337,20 @@ h2 {
     position: relative;
     top: 2rem;
     left: 50%;
-    transform: translateX(-50%);
-    height: 4px; }
+    transform: translateX(-50%); }
   @media only screen and (max-width: 68.75em) {
     .ham-btn {
       display: inline-block; } }
 
-.ham-btn--toggled {
-  right: 4.5rem; }
-  .ham-btn--toggled .ham-btn__line {
-    transform: translate(-50%, 20%) rotate(45deg); }
-  .ham-btn--toggled::before {
-    display: none; }
-  .ham-btn--toggled::after {
-    transform: translate(-50%, -145%) rotate(-45deg);
-    height: 3.5px; }
+.ham-btn--toggled .ham-btn__line {
+  transform: translate(-50%, 20%) rotate(45deg); }
+
+.ham-btn--toggled::before {
+  display: none; }
+
+.ham-btn--toggled::after {
+  transform: translate(-50%, -145%) rotate(-45deg);
+  height: 3.5px; }
 
 .card {
   display: flex;
@@ -495,13 +517,19 @@ h2 {
   left: 0;
   bottom: 0;
   right: 0; }
+  @media only screen and (max-width: 56.25em) {
+    .display-container {
+      flex-direction: column;
+      position: absolute; } }
 
 .display-item {
   display: flex;
   width: 100%;
+  min-height: 100vh;
   transition: all 0.5s linear;
   position: relative;
-  perspective: 200rem; }
+  perspective: 200rem;
+  overflow: hidden; }
   .display-item__side {
     display: flex;
     flex-direction: column;
@@ -514,16 +542,15 @@ h2 {
     backface-visibility: hidden;
     height: 100%; }
     .display-item__side--front {
-      position: relative; }
+      position: relative;
+      background-size: cover;
+      background-position: center; }
       .display-item__side--front--1 {
-        background-image: linear-gradient(to top left, rgba(0, 1, 1, 0.3) 0%, rgba(0, 1, 1, 0.3) 25%, rgba(0, 1, 1, 0.2) 25%, rgba(0, 1, 1, 0.2) 50%, rgba(0, 1, 1, 0.1) 50%, rgba(0, 1, 1, 0.1) 75%, rgba(0, 1, 1, 0.05) 75%, rgba(0, 1, 1, 0.05) 100%), url(../../img/comp-1.jpg);
-        background-size: cover; }
+        background-image: linear-gradient(to top left, rgba(0, 1, 1, 0.3) 0%, rgba(0, 1, 1, 0.3) 25%, rgba(0, 1, 1, 0.2) 25%, rgba(0, 1, 1, 0.2) 50%, rgba(0, 1, 1, 0.1) 50%, rgba(0, 1, 1, 0.1) 75%, rgba(0, 1, 1, 0.05) 75%, rgba(0, 1, 1, 0.05) 100%), url(../../img/comp-1.jpg); }
       .display-item__side--front--2 {
-        background-image: linear-gradient(to top left, rgba(0, 1, 1, 0.3) 0%, rgba(0, 1, 1, 0.3) 25%, rgba(0, 1, 1, 0.2) 25%, rgba(0, 1, 1, 0.2) 50%, rgba(0, 1, 1, 0.1) 50%, rgba(0, 1, 1, 0.1) 75%, rgba(0, 1, 1, 0.05) 75%, rgba(0, 1, 1, 0.05) 100%), url(../../img/comp-2.jpg);
-        background-size: cover; }
+        background-image: linear-gradient(to top left, rgba(0, 1, 1, 0.3) 0%, rgba(0, 1, 1, 0.3) 25%, rgba(0, 1, 1, 0.2) 25%, rgba(0, 1, 1, 0.2) 50%, rgba(0, 1, 1, 0.1) 50%, rgba(0, 1, 1, 0.1) 75%, rgba(0, 1, 1, 0.05) 75%, rgba(0, 1, 1, 0.05) 100%), url(../../img/comp-2.jpg); }
       .display-item__side--front--3 {
-        background-image: linear-gradient(to top left, rgba(0, 1, 1, 0.3) 0%, rgba(0, 1, 1, 0.3) 25%, rgba(0, 1, 1, 0.2) 25%, rgba(0, 1, 1, 0.2) 50%, rgba(0, 1, 1, 0.1) 50%, rgba(0, 1, 1, 0.1) 75%, rgba(0, 1, 1, 0.05) 75%, rgba(0, 1, 1, 0.05) 100%), url(../../img/comp-3.jpg);
-        background-size: cover; }
+        background-image: linear-gradient(to top left, rgba(0, 1, 1, 0.3) 0%, rgba(0, 1, 1, 0.3) 25%, rgba(0, 1, 1, 0.2) 25%, rgba(0, 1, 1, 0.2) 50%, rgba(0, 1, 1, 0.1) 50%, rgba(0, 1, 1, 0.1) 75%, rgba(0, 1, 1, 0.05) 75%, rgba(0, 1, 1, 0.05) 100%), url(../../img/comp-3.jpg); }
     .display-item__side--back {
       display: flex;
       flex-direction: column;
@@ -535,9 +562,24 @@ h2 {
       .display-item__side--back .btn-group {
         flex-direction: column;
         align-items: stretch; }
+        @media only screen and (max-width: 56.25em) {
+          .display-item__side--back .btn-group {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; } }
+        @media only screen and (max-width: 40.625em) {
+          .display-item__side--back .btn-group {
+            flex-direction: column;
+            align-items: stretch; } }
         .display-item__side--back .btn-group .btn--red {
-          margin-right: 0;
-          margin-bottom: 1.5rem; }
+          margin-right: 0; }
+          @media only screen and (max-width: 56.25em) {
+            .display-item__side--back .btn-group .btn--red {
+              margin-right: 3rem;
+              margin-bottom: 0rem; } }
+          @media only screen and (max-width: 40.625em) {
+            .display-item__side--back .btn-group .btn--red {
+              margin-right: 0; } }
   .display-item__heading {
     width: 100%;
     font-size: 4rem;
@@ -547,6 +589,11 @@ h2 {
   .display-item__details {
     width: 90%;
     text-align: center; }
+    @media only screen and (max-width: 56.25em) {
+      .display-item__details {
+        font-size: calc(100% * 1.7);
+        width: 70%;
+        line-height: 3rem; } }
   .display-item:hover .display-item__side--front {
     transform: rotateY(-180deg); }
   .display-item:hover .display-item__side--back {

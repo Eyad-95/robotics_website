@@ -22,6 +22,14 @@
   margin-bottom: 7.5rem !important;
 }
 
+.u-margin-0 {
+  margin: 0 !important;
+}
+
+.u-padding-0 {
+  padding: 0 !important;
+}
+
 .hidden {
   display: none;
 }
@@ -46,6 +54,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &--ham-btn {
+    right: 3rem !important;
+    top: 4rem !important;
+
+    &::after,
+    &::before,
+    .ham-btn__line {
+      width: 3rem !important;
+      height: 5px !important;
+
+      @include respond(in-between-tab) {
+        width: 3.5rem !important;
+        height: 4.5px !important;
+      }
+    }
+
+    &::after {
+      top: 2rem !important;
+    }
   }
 }
 

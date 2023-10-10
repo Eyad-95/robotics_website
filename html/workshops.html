@@ -10,10 +10,11 @@
     />
 
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Document</title>
+    <title>Workshops</title>
   </head>
 
   <body>
+    <!-- HEADER -->
     <header class="header">
       <a href="../index.html">
         <svg
@@ -36,13 +37,14 @@
         </svg>
       </a>
 
+      <!-- MAIN NAVBAR -->
       <nav class="nav">
         <ul class="nav__nav-list">
           <li class="nav__nav-item active--link">
             <a href="#" class="nav__nav-link">Workshops</a>
           </li>
           <li class="nav__nav-item">
-            <a href="./mektaro.html" class="nav__nav-link">Mekatro</a>
+            <a href="./mekatro.html" class="nav__nav-link">Mekatro</a>
           </li>
           <li class="nav__nav-item">
             <a href="./competitions.html" class="nav__nav-link">Competitions</a>
@@ -56,12 +58,43 @@
         </ul>
       </nav>
 
-      <div class="ham-btn hidden">
+      <!-- NAVBAR COLLAPSED -->
+      <nav class="nav-collapsed" id="nav-collapsed">
+        <ul class="nav-collapsed__nav-list" id="nav-collapsed__nav-list">
+          <li class="nav-collapsed__nav-item">
+            <a href="./workshops.html" class="nav-collapsed__nav-link"
+              >01 Workshops</a
+            >
+          </li>
+          <li class="nav-collapsed__nav-item">
+            <a href="./mekatro.html" class="nav-collapsed__nav-link"
+              >02 Mekatro</a
+            >
+          </li>
+          <li class="nav-collapsed__nav-item">
+            <a href="./competitions.html" class="nav-collapsed__nav-link"
+              >03 Competitions</a
+            >
+          </li>
+          <li class="nav-collapsed__nav-item">
+            <a href="./projects.html" class="nav-collapsed__nav-link"
+              >04 Projects</a
+            >
+          </li>
+          <li class="nav-collapsed__nav-item">
+            <a href="./about.html" class="nav-collapsed__nav-link">05 About</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- HAM-BUTTON -->
+      <div class="ham-btn hidden" id="toggle-nav-button">
         <div class="ham-btn__line"></div>
       </div>
     </header>
 
     <main class="main">
+      <!-- HEADER-SECTION -->
       <header class="header-section">
         <h1 class="u-margin-bottom-medium">Workshops</h1>
         <p>
@@ -72,8 +105,10 @@
         </p>
       </header>
 
+      <!-- CARDS-SECTION -->
       <section class="cards-section">
         <div class="cards-container">
+          <!-- CARD 1 -->
           <div class="card">
             <div class="card__left">
               <h2 class="card__heading u-margin-bottom-medium">solidwords</h2>
@@ -107,6 +142,8 @@
               </div>
             </div>
           </div>
+
+          <!-- CARD 2 -->
           <div class="card">
             <div class="card__left">
               <h2 class="card__heading u-margin-bottom-medium">PCB Design</h2>
@@ -138,6 +175,8 @@
               </div>
             </div>
           </div>
+
+          <!-- CARD 3 -->
           <div class="card">
             <div class="card__left">
               <h2 class="card__heading u-margin-bottom-medium">ROS</h2>
@@ -173,9 +212,8 @@
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
-      <!-- <img src="./img/logo-bg.png" alt="" class="footer__logo" /> -->
-
       <svg
         class="footer__logo"
         xmlns="http://www.w3.org/2000/svg"

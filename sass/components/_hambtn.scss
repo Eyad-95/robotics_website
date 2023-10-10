@@ -1,18 +1,20 @@
 .ham-btn {
-  position: absolute;
-  right: 0;
+  position: fixed;
+  right: 3rem;
+  top: 4rem;
   height: 5rem;
   width: 5rem;
   border-radius: 8px;
   padding: 0.5rem 0;
   z-index: 1000;
+  cursor: pointer;
 
   &__line {
     position: relative;
     background-color: $color-white;
     border-radius: 50px;
-    width: 4rem;
-    height: 3.5px;
+    width: 3.5rem;
+    height: 4.5px;
     top: 44%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -25,8 +27,8 @@
     display: block;
     background-color: $color-white;
     border-radius: 50px;
-    width: 4rem;
-    height: 3.5px;
+    width: 3.5rem;
+    height: 4.5px;
     transition: all 0.1s;
   }
 
@@ -42,7 +44,6 @@
     top: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    height: 4px;
   }
 
   @include respond(in-between-tab) {
@@ -51,7 +52,6 @@
 }
 
 .ham-btn--toggled {
-  right: 4.5rem;
   .ham-btn__line {
     transform: translate(-50%, 20%) rotate(45deg);
   }
