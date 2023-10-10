@@ -1,15 +1,15 @@
+//// CAROUSEL & COUNTER SECTION
 .carouselcounter-section {
   margin-top: 4rem;
   margin-bottom: 10rem;
 }
 
+//// POSTS-SECTION
 .posts-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   justify-content: center;
-  align-items: center;
   justify-items: center;
   align-items: center;
-
   gap: 3rem;
 }

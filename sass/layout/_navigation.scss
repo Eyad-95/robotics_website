@@ -1,10 +1,11 @@
+//// NAV-BAR
 .nav {
-  display: inline-block;
-  padding: 0.5rem 3rem;
-  margin-left: -4rem;
-  letter-spacing: 1.5px;
-  max-width: 100%;
   position: relative;
+  display: inline-block;
+  max-width: 100%;
+  margin-left: -4rem;
+  padding: 0.5rem 3rem;
+  letter-spacing: 1.5px;
 
   &__nav-list {
     display: flex;
@@ -14,6 +15,7 @@
 
   &__nav-item {
     display: inline-block;
+
     &:not(:last-child) {
       margin-right: 3.5rem;
     }
@@ -21,31 +23,32 @@
 
   &__nav-item::after {
     content: "";
-    margin-top: 2px;
     display: block;
     width: 100%;
     height: 2px;
+    margin-top: 2px;
     background-color: $color-primary-1;
     transform: scaleX(0);
-
     transition: all 0.3s ease;
   }
 
   &__nav-link:link,
   &__nav-link:visited {
-    text-decoration: none;
     color: currentColor;
+    text-decoration: none;
     transition: color 0.3s;
   }
 
   &__nav-item:hover {
     cursor: pointer;
+
     &::after {
       transform: scaleX(1) translateY(3px);
     }
+
     > .nav__nav-link {
-      color: $color-primary-1;
       font-weight: 400;
+      color: $color-primary-1;
     }
   }
 
@@ -62,34 +65,35 @@
   }
 }
 
+//// NAV-BAR COLLAPSED
 .nav-collapsed {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
-  background-color: $color-primary-1;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $color-primary-1;
   transform: translateX(-100%);
   transition: all 0.2s ease;
+  z-index: 1000;
 
   &:hover {
     width: 100%;
   }
 
   &__nav-list {
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    list-style: none;
     font-size: 4rem;
     font-weight: 200;
-    letter-spacing: $letter-spacing-small;
+    text-align: center;
     text-transform: uppercase;
-    list-style: none;
+    letter-spacing: $letter-spacing-small;
     transform: translateX(-100%);
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
@@ -97,22 +101,11 @@
   &__nav-item {
     display: block;
     width: 100%;
+
     &:not(:last-of-type) {
       margin-bottom: 1.5rem;
     }
   }
-
-  // &__nav-item::after {
-  //   content: "";
-  //   margin-top: 2px;
-  //   display: block;
-  //   width: 100%;
-  //   height: 2px;
-  //   background-color: $color-primary-1;
-  //   transform: scaleX(0);
-
-  //   transition: all 0.3s ease;
-  // }
 
   &__nav-link:link,
   &__nav-link:visited {
@@ -120,7 +113,6 @@
     padding: 1rem;
     text-decoration: none;
     color: $color-white;
-    transition: all 0.3s;
     background-image: linear-gradient(
       120deg,
       transparent 0%,
@@ -128,6 +120,7 @@
       #fff 50%
     );
     background-size: 230%;
+    transition: all 0.3s;
 
     &:hover {
       background-position: 100%;
@@ -138,12 +131,5 @@
 
   &__nav-item:hover {
     cursor: pointer;
-    // &::after {
-    //   transform: scaleX(1) translateY(3px);
-    // }
-    // > .nav-collapsed__nav-link {
-    //   color: $color-primary-1;
-    //   font-weight: 400;
-    // }
   }
 }

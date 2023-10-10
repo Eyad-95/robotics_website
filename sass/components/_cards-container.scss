@@ -1,10 +1,11 @@
+//// CARD
 .card {
   display: flex;
   max-width: 70%;
   margin: 8rem auto;
-  box-shadow: 0 10px 6px #000000;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  box-shadow: 0 10px 6px #000000;
   overflow: hidden;
 
   @include respond(tab-land) {
@@ -14,9 +15,9 @@
   &__left {
     display: flex;
     flex-direction: column;
-    background-color: $color-grey-2;
-    padding: 3.5rem 3rem;
     width: 70%;
+    padding: 3.5rem 3rem;
+    background-color: $color-grey-2;
     background-image: linear-gradient(
       to top left,
       rgba(white, 0.4) 0%,
@@ -37,11 +38,11 @@
   &__right {
     display: flex;
     flex-direction: column;
-    border-left: 2px dashed $color-white;
+    justify-content: space-between;
+    width: 30%;
     padding: 3rem;
     padding-left: 5%;
-    width: 30%;
-    justify-content: space-between;
+    border-left: 2px dashed $color-white;
     background-color: $color-grey-2;
 
     @include respond(tab-land) {
@@ -55,12 +56,14 @@
     }
   }
 
+  /// CONTENT
   &__content-box {
     text-align: left;
+
     h3 {
-      text-transform: capitalize;
       font-size: 2.75rem;
       font-weight: 400;
+      text-transform: capitalize;
       letter-spacing: 0.25rem;
     }
     p {
@@ -81,11 +84,11 @@
 
   &__heading {
     align-self: flex-start;
+    border-bottom: 2px solid $color-primary-1;
     font-size: 3rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: $letter-spacing-sub-heading;
-    border-bottom: 2px solid $color-primary-1;
 
     @include respond(phone) {
       align-self: center;
@@ -94,9 +97,9 @@
 
   &__text {
     padding-left: 2rem;
-    letter-spacing: 0.08rem;
     font-size: 1.5rem;
     line-height: 2rem;
+    letter-spacing: 0.08rem;
 
     @include respond(phone) {
       padding-left: 0;

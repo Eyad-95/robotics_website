@@ -1,12 +1,11 @@
+//// RECORDED SESSIONS CONTAINER
 .sessions-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   justify-content: center;
   justify-items: center;
   align-items: center;
-
   gap: 6.5rem;
-
   padding-top: 5rem;
 
   @include respond(tab-port) {
@@ -18,12 +17,13 @@
   }
 }
 
+/// RECORDED SESSION
 .session-card {
   position: relative;
   width: 100%;
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: $box-shadow-3--light;
+  overflow: hidden;
   cursor: pointer;
 
   @include respond(phone) {
@@ -37,13 +37,12 @@
 
     &::before {
       content: "";
-      display: block;
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
-
+      display: block;
       background-image: linear-gradient(
         to top left,
         rgba(white, 0.4) 0%,
@@ -71,18 +70,17 @@
 
   &__disc {
     position: absolute;
-    bottom: 1.2rem;
     left: 2rem;
-    font-size: 1.5rem;
-    letter-spacing: 0.2rem;
-    transform: translateY(200%);
-    transition: transform 0.2s ease-out;
-
-    background-color: rgba($color-black, $alpha: 0.5);
+    bottom: 1.2rem;
     width: 100%;
     padding: 2rem 4rem;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    background-color: rgba($color-black, $alpha: 0.5);
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    transform: translateY(200%);
+    transition: transform 0.2s ease-out;
   }
 
   & {

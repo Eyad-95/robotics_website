@@ -1,3 +1,4 @@
+//// PROJECT CONTAINER
 .project-container {
   display: flex;
   margin-top: 10rem;
@@ -13,6 +14,7 @@
   }
 }
 
+//// SESSION CONTAINER
 .session-container {
   display: flex;
   margin-bottom: 5rem;
@@ -22,6 +24,7 @@
     align-items: center;
   }
 
+  /// LEFT COLUMN
   & .column {
     &__left {
       width: 70%;
@@ -36,8 +39,8 @@
       }
 
       p {
-        margin-bottom: 2rem;
         width: 100%;
+        margin-bottom: 2rem;
       }
 
       & .arrow {
@@ -45,9 +48,10 @@
       }
     }
 
+    /// RIGHT COLUMN
     &__right {
-      width: 30%;
       align-self: flex-start;
+      width: 30%;
 
       @include respond(tab-port) {
         align-self: center;
@@ -56,8 +60,8 @@
       }
 
       & .play-button {
-        height: 3rem;
         width: 3rem;
+        height: 3rem;
 
         .icon {
           width: 60%;
@@ -75,16 +79,17 @@
   }
 }
 
+/// COLUMN
 .column {
+  // LEFT
   &__left {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    position: relative;
-
-    margin-right: 6rem;
     width: 50%;
+    margin-right: 6rem;
 
     @include respond(tab-port) {
       width: 80%;
@@ -95,6 +100,7 @@
 
     h1 {
       text-align: left;
+
       @include respond(tab-port) {
         text-align: center;
       }
@@ -102,15 +108,16 @@
 
     p {
       margin-bottom: 5.5rem;
+
       @include respond(tab-port) {
-        text-align: center;
         margin-bottom: 2rem;
+        text-align: center;
       }
     }
 
     & .arrow {
-      font-size: 5rem;
       margin-top: auto;
+      font-size: 5rem;
 
       &__left {
         transform: translate(-50%, -50%);
@@ -118,6 +125,7 @@
     }
   }
 
+  // RIGHT
   &__right {
     display: flex;
     flex-direction: column;

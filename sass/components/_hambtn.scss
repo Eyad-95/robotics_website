@@ -1,35 +1,36 @@
+//// HAM-BUTTON
 .ham-btn {
   position: fixed;
   right: 3rem;
   top: 4rem;
-  height: 5rem;
   width: 5rem;
-  border-radius: 8px;
+  height: 5rem;
   padding: 0.5rem 0;
+  border-radius: 8px;
   z-index: 1000;
   cursor: pointer;
 
   &__line {
     position: relative;
-    background-color: $color-white;
-    border-radius: 50px;
-    width: 3.5rem;
-    height: 4.5px;
     top: 44%;
     left: 50%;
+    width: 3.5rem;
+    height: 4.5px;
+    border-radius: 50px;
+    background-color: $color-white;
     transform: translate(-50%, -50%);
-    transition: all 0.1s;
+    transition: transform 0.1s;
   }
 
   &::after,
   &::before {
     content: "";
     display: block;
-    background-color: $color-white;
-    border-radius: 50px;
     width: 3.5rem;
     height: 4.5px;
-    transition: all 0.1s;
+    border-radius: 50px;
+    background-color: $color-white;
+    transition: transform 0.1s;
   }
 
   &::before {
@@ -51,6 +52,7 @@
   }
 }
 
+/// TOGGLED HAM-BUTTON
 .ham-btn--toggled {
   .ham-btn__line {
     transform: translate(-50%, 20%) rotate(45deg);
@@ -61,7 +63,7 @@
   }
 
   &::after {
-    transform: translate(-50%, -145%) rotate(-45deg);
     height: 3.5px;
+    transform: translate(-50%, -145%) rotate(-45deg);
   }
 }
