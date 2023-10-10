@@ -1,33 +1,34 @@
-@import "abstracts/variables";
 @import "abstracts/mixins";
+@import "abstracts/variables";
 
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/btn-group";
+@import "components/card";
 @import "components/carousel";
 @import "components/counter";
-@import "components/post";
-@import "components/hambtn";
-@import "components/cards-container";
-@import "components/btn-group";
 @import "components/display-container";
-@import "components/sessions-container";
+@import "components/hambtn";
 @import "components/play-button";
-@import "components/projects-container";
-@import "components/window";
+@import "components/post";
+@import "components/project";
+@import "components/session-container";
+@import "components/sessions-container";
 @import "components/video";
+@import "components/window";
 
+@import "layout/big-hero";
+@import "layout/column";
+@import "layout/footer";
+@import "layout/general-grid";
 @import "layout/header";
 @import "layout/navigation";
-@import "layout/footer";
-@import "layout/big-hero";
-@import "layout/general-grid";
-@import "layout/column";
 
-@import "pages/home";
 @import "pages/about";
-@import "pages/workshops";
+@import "pages/home";
 @import "pages/mekatro";
 @import "pages/projects";
 @import "pages/workshops_handouts";
+@import "pages/workshops";
