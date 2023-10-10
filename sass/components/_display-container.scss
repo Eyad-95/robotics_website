@@ -75,10 +75,14 @@
 
         .btn--red {
           margin-right: 0;
+          margin-bottom: 1.5rem;
+
+          @include respond(tab-land) {
+            margin-bottom: 0rem;
+          }
 
           @include respond(tab-port) {
             margin-right: 3rem;
-            margin-bottom: 0rem;
           }
 
           @include respond(phone) {

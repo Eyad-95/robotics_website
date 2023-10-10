@@ -1,7 +1,11 @@
+//// TEXT UTILS
 .u-center-text {
   text-align: center !important;
 }
 
+//// SPACING UTILS
+
+/// MARGIN
 .u-margin-bottom-xs {
   margin-bottom: 0.5rem !important;
 }
@@ -26,23 +30,38 @@
   margin: 0 !important;
 }
 
+/// PADDING
 .u-padding-0 {
   padding: 0 !important;
 }
 
+//// POSITION
+.posToBottom {
+  bottom: 0;
+}
+
+.resetPos {
+  position: static;
+}
+
+//// DISPLAY
 .hidden {
   display: none;
 }
 
+//// HELPER CLASSES
+
+/// ACTIVE LINK
 .active {
   &--link {
     color: $color-primary-1 !important;
+
     &::after {
       content: "";
-      margin-top: 5px !important;
       display: block;
       width: 100%;
       height: 2px;
+      margin-top: 5px !important;
       background-color: $color-primary-1;
       transform: scaleX(1) !important;
     }
@@ -50,12 +69,14 @@
 }
 
 .helper-class {
+  /// HANDOUTS
   &--handouts {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
+  /// HAM-BUTTON
   &--ham-btn {
     right: 3rem !important;
     top: 4rem !important;
@@ -76,12 +97,4 @@
       top: 2rem !important;
     }
   }
-}
-
-.posToBottom {
-  bottom: 0;
-}
-
-.resetPos {
-  position: static;
 }

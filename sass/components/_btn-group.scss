@@ -1,3 +1,4 @@
+//// BUTTON GROUP
 .btn-group {
   display: flex;
   align-items: center;
@@ -8,31 +9,34 @@
   }
 }
 
+//// BTN CLASSES
 .btn {
+  /// GENERAL BTN STYLES
   &,
   &:link,
   &:visited {
-    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 3rem;
     border-radius: 10rem;
     outline: none;
-    padding: 1rem 3rem;
     font-size: 1.75rem;
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
+    text-align: center;
     text-decoration: none;
-    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
     transition: all 0.2s;
     cursor: pointer;
-    position: relative;
 
     @media only screen and (max-width: 82em) {
       margin-top: 1.5rem;
     }
   }
 
+  /// GENERAL HOVER STYLES
   &:hover {
-    transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    transform: translateY(-3px);
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
@@ -40,18 +44,21 @@
     }
   }
 
+  /// GENERAL ACTIVE AND FOCUS STYLES
   &:active,
   &:focus {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
     outline: none;
     transform: translateY(-1px);
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
 
+  /// RED BUTTON
   &--red {
     background-color: $color-primary-1;
     color: $color-white;
   }
 
+  /// WHITE BUTTON
   &--white {
     background-color: $color-white;
     color: $color-primary-1;
@@ -66,21 +73,22 @@
   }
 }
 
+/// ARROW BUTTON STYLES
 .arrow {
-  z-index: 100;
   &,
   &:link,
   &:visited {
+    position: relative;
     width: 5rem;
     min-height: 5rem;
-    color: $color-white;
+    border-radius: 50%;
     outline: none;
+    text-align: center;
     text-decoration: none;
+    color: $color-white;
+    z-index: 100;
     cursor: pointer;
     transition: all 0.2s;
-    border-radius: 50%;
-    text-align: center;
-    position: relative;
   }
 
   &__left {
@@ -100,8 +108,8 @@
   }
 
   &:hover {
-    color: $color-primary-1;
     background-color: $color-white;
+    color: $color-primary-1;
   }
 
   &:active {
