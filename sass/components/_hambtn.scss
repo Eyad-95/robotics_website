@@ -10,6 +10,22 @@
   z-index: 1000;
   cursor: pointer;
 
+  @include respond(in-between-tab) {
+    display: inline-block;
+    right: 9rem;
+    top: 5rem;
+  }
+
+  @include respond(tab-port) {
+    right: 3rem;
+    top: 4rem;
+  }
+
+  @include respond(phone) {
+    right: 1.7rem;
+    top: 4rem;
+  }
+
   &__line {
     position: relative;
     top: 44%;
@@ -45,10 +61,6 @@
     top: 2rem;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  @include respond(in-between-tab) {
-    display: inline-block;
   }
 }
 
